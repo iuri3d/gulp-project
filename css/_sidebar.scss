@@ -1,10 +1,10 @@
 
-
+/////// SIDE BAR /////////
 .sidebar{
     list-style: none;
     position: fixed;
     height: 100%;
-    background-color: $mainbackgroundcolor;
+    background-color: $backgroundcolor;
     transition: all 0.2s ease-in-out;
 
     /*&.open{
@@ -35,7 +35,7 @@
     }
 
     a + a + a{
-        border-top: 1px solid rgba($color: white, $alpha: 0.4);
+        border-top: 1px solid rgba($color: white, $alpha: 0.1);
     }
 }
 
@@ -43,7 +43,7 @@
     padding: 0 15px;
     border: 0;
     background-color: transparent;
-    font-size: $iconfontsize;
+    font-size: 1rem;
 
     .fas{
         color: $iconcolor;

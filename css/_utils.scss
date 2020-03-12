@@ -1,0 +1,36 @@
+$mainbackgroundcolor: #1E1E2F;
+$backgroundcolor:#2a2a3f;
+$lightbackground: #3a3c53;
+
+$sidebarhover: #454569;
+
+$textcolor: white;
+$textlight: 300;
+$textregular: 400;
+$textfontfamily: 'Open Sans';
+
+$iconcolor:rgb(208, 210, 218);
+$iconfontsize:1rem;
+
+$border-radius: 3px;
+
+$mailcircle: 30px;
+$mailtitle:0.95rem;
+$mailsubject:0.8rem;
+$mailtext: 0.65rem;
+
+.d-flex{
+    display: flex;
+}
+
+.just-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+ol{
+    padding: 0;
+}
