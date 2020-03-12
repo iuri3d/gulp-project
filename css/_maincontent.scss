@@ -145,7 +145,7 @@
     background-color: $lightbackground;
 
     li + li{
-        border-top: 1px solid black;
+        border-top: 1px solid rgba($color: white, $alpha: 0.2);
     }
 }
 
@@ -250,4 +250,71 @@
 .down{
     padding:10px;
     height: auto;
+}
+
+/////////////////ORDERS /////////////////
+.table-row{
+    padding: 7px 0;
+}
+
+.table-row + .table-row {
+    border-top: 1px solid rgba($color: white, $alpha: 0.2);
+}
+
+.table-order{
+    background-color: $lightbackground;
+    margin-top: 7px;
+    padding: 0 10px;
+    border-radius: $border-radius;
+}
+
+.table-header{
+    color: $textcolor;
+    font-family: $textfontfamily;
+    font-weight: $textregular;
+    padding: 10px 0;
+
+    .header-id{
+        display: none;
+    }
+
+    .header-client{
+        width: 60%;
+    }
+
+    .header-number{
+        display: none;
+    }
+
+    .header-value{
+        width: 20%;
+    }
+
+    .header-date{
+        width: 20%;
+    }
+}
+
+.client{
+    width: 60%;
+    font-family: $textfontfamily;
+    font-weight: $textlight;
+    font-size: 0.75rem;
+    color: $textcolor;
+}
+
+.value{
+    width: 20%;
+    font-family: $textfontfamily;
+    font-weight: $textlight;
+    font-size: 0.75rem;
+    color: $textcolor;
+}
+
+.date{
+    width: 20%;
+    font-family: $textfontfamily;
+    font-weight: $textlight;
+    font-size: 0.75rem;
+    color: $textcolor;
 }
