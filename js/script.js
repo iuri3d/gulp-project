@@ -7,6 +7,10 @@ $(document).ready(function(){
     $('.close').on('click', function(){
         $('#myModal').css('display', 'none');
     });
+
+    $('.ticket-open').on('click',function(){
+        $(this).parent().siblings('.collapsible').toggleClass('down');
+    });
    
 
 
