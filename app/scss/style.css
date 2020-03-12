@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap");
+.d-flex {
+  display: flex; }
+
+.sidebar {
+  list-style: none;
+  position: fixed;
+  height: 100%;
+  background-color: #aaa;
+  transition: all 0.2s ease-in-out;
+    /*&.open{
+        width: 200px;
+
+        .collapse{
+            display: flex;
+        }
+    }*/ }
+  .sidebar .header {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 0 7px;
+    height: 60px; }
+    .sidebar .header .logo {
+      padding: 0 25px;
+      font-size: 1.25rem; }
+  .sidebar .collapse {
+    display: none;
+    transition: all 0.15s ease-in-out; }
+  .sidebar a + a + a {
+    border-top: 1px solid rgba(255, 255, 255, 0.4); }
+
+.icon {
+  padding: 0 15px;
+  border: 0;
+  background-color: transparent;
+  font-size: 1rem; }
+  .icon .fas {
+    color: white; }
+
+.sidebaritem {
+  padding: 10px 5px;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+  transition: all 0.15s ease-in-out; }
+  .sidebaritem:hover {
+    background-color: red; }
+
+html {
+  box-sizing: border-box;
+  font-size: 100%; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0; }
+
+/*# sourceMappingURL=style.css.map */

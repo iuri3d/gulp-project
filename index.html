@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="dist/style.css?cb=123">
+</head>
+<body>
+
+    <div class="container d-flex">
+        <button type="button" class="client-login login">
+            <p>Sou Cliente</p>
+        </button>
+        <button class="staff-login login">
+            <p>Sou Colaborador</p>
+        </button>
+    </div>
+    
+     <!-- Modal Html-->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="modal-header">
+                <h4 class="modal-title">Member Login</h4>
+            </div>
+            <div class="modal-body">
+                <form id="login-form">
+					<div class="form-group">
+						<input type="text" class="form-control" name="username" placeholder="Nome de Utilizador" required="required">		
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" name="password" placeholder="Palavra-passe" required="required">	
+					</div>        
+					<div class="form-group">
+						<button type="submit" class="login-btn" id="login-btn">Login</button>
+					</div>
+				</form>
+            </div>
+            <div class="modal-footer">
+				<a href="#">Esqueceu a palavra-passe?</a>
+			</div>            
+        </div>    
+    </div>
+
+    <script src="https://kit.fontawesome.com/6d7f575d6e.js" crossorigin="anonymous"></script>
+    <script  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/dist/script.js?cb=123"></script>
+</body>
+</html>
