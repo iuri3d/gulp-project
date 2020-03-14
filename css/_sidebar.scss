@@ -7,13 +7,13 @@
     background-color: $backgroundcolor;
     transition: all 0.2s ease-in-out;
 
-    /*&.open{
+    &.open{
         width: 200px;
 
         .collapse{
             display: flex;
         }
-    }*/
+    }
 
     .header{
         color: $textcolor;

@@ -162,14 +162,11 @@ ol {
   position: fixed;
   height: 100%;
   background-color: #2a2a3f;
-  transition: all 0.2s ease-in-out;
-    /*&.open{
-        width: 200px;
-
-        .collapse{
-            display: flex;
-        }
-    }*/ }
+  transition: all 0.2s ease-in-out; }
+  .sidebar.open {
+    width: 200px; }
+    .sidebar.open .collapse {
+      display: flex; }
   .sidebar .header {
     color: white;
     text-decoration: none;
@@ -469,6 +466,16 @@ ol {
       width: 50%;
       height: 100vh;
       font-size: 5rem; } }
+@media screen and (min-width: 768px) {
+  .smallrow {
+    display: flex; }
+
+  .sale-objectives, .weather, .social {
+    width: calc(100%/3); }
+
+  .gap + .gap {
+    margin-top: 0;
+    margin-left: 7px; } }
 html {
   box-sizing: border-box;
   font-size: 100%; }
