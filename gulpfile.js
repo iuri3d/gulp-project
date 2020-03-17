@@ -11,8 +11,8 @@ const uglify = require('gulp-uglify');
 
 //File path variables
 const files ={
-    scssPath: 'app/scss/**/*.scss',
-    jsPath: 'app/js/**/*.js'
+    scssPath: 'css/**/*.scss',
+    jsPath: 'js/**/*.js'
 }
 
 // Sass task
@@ -35,7 +35,7 @@ function jsTask(){
 // Cachebusting task
 const cbstring = new Date().getTime();
 function cacheBustTask(){
-    return src(['index.html', 'home.html'])
+    return src(['index.html'])
         .pipe(replace(/cb=\d+/g, 'cb=' + cbstring))
         .pipe(dest('.'));
 }

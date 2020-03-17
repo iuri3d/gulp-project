@@ -1,320 +1,335 @@
-.contentbox{
-    margin-left: 58px;
-    border-radius: $border-radius;
-}
-.maincontent{
-    margin: 7px;
+.contentbox {
+  margin-left: 58px;
+  border-radius: $border-radius;
 }
 
-.smallrow{
-    width: 100%;
-    min-height: 100px;
+.maincontent {
+  margin: 7px;
 }
 
-.bigrow{
-    width: 100%;
-    min-height: 400px;
+.smallrow {
+  width: 100%;
+  min-height: 100px;
+}
+
+.bigrow {
+  width: 100%;
+  min-height: 400px;
 }
 
 /////////////////SALES/////////////////
-.sale-objectives{
-    width: 100%;
-    height: 100px;
-    background-color: $iconcolor;
-    border-radius: 3px;
-    p{
-        margin-bottom: 10px;
-        margin-top: 0;
-        padding-left: 0px;
-        color: $textcolor;
-    }
+.sale-objectives {
+  width: 100%;
+  height: 100px;
+  background-color: $iconcolor;
+  border-radius: 3px;
+
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding-left: 0;
+    color: $textcolor;
+  }
 }
 
-.progressbar{
-    border-radius: 2px;
-    background-color: #70798C;
-    width: 100%;
-    .bar{
-        justify-content: space-around;
-        height: 1.5rem;
-        width: 45%;
-        background-color: dodgerblue;
-        color: white;
-        border-radius: 2px 0 0 2px;
-    }
+.progressbar {
+  border-radius: 2px;
+  background-color: #70798c;
+  width: 100%;
+
+  .bar {
+    justify-content: space-around;
+    height: 1.5rem;
+    width: 45%;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 2px 0 0 2px;
+  }
 }
 
 //////////WEATHER WIDGET//////////////////
-.weather{
-    height: 100px;
-    color: $textcolor;
-    background-color: #4062BB;
-    border-radius: 3px;
+.weather {
+  height: 100px;
+  color: $textcolor;
+  background-color: #4062bb;
+  border-radius: 3px;
 }
 
 /////////SOCIAL MEDIA /////////////////
-.social{
-    height: 100px;
-    background-color: #4062BB;
-    border-radius: 3px;
-    color: $textcolor;
+.social {
+  height: 100px;
+  background-color: #4062bb;
+  border-radius: 3px;
+  color: $textcolor;
 
-    i{
-        color: $iconcolor;
-        font-size: 2rem;
-    }
+  i {
+    color: $iconcolor;
+    font-size: 2rem;
+  }
 }
 
 ////////Space between blocks//////
-.gap + .gap{
-    margin-top: 7px;
+.gap + .gap {
+  margin-top: 7px;
 }
-
 
 ////////////////////EMAILS SECTION /////////////////////
-.emails{
-    max-height: 400px;
-    margin-top: 7px;
-    border-radius: $border-radius;
-    background-color: $backgroundcolor;
-    color: $textcolor;
-    font-family: $textfontfamily;
-    font-weight: $textlight;
-    font-size: 1rem;
+.emails {
+  max-height: 400px;
+  margin-top: 7px;
+  border-radius: $border-radius;
+  background-color: $backgroundcolor;
+  color: $textcolor;
+  font-family: $textfontfamily;
+  font-weight: $textlight;
+  font-size: 1rem;
 
-    p{
-        margin: 0;
-        padding: 15px 10px 15px 20px;
-    }
-
-    .mailitem:last-child{
-        border-radius: 0 0 3px 3px;
-    }
+  p {
+    margin: 0;
+    padding: 15px 10px 15px 20px;
+  }
 }
 
-.mailitem{
-    background-color: $lightbackground;
-    height: 58px;
+.mailitem {
+  background-color: $lightbackground;
+  height: 58px;
 
-    .mailcontent{
-        width: 100%;
-    }
-    .mailimage{
-        min-width: $mailcircle;
-        min-height: $mailcircle;
-        background-color: black;
-        border-radius: 50%;
-        margin: 0 10px 0 5px;
+  &:last-child {
+    border-radius: 0 0 3px 3px;
+  }
+
+  .mailcontent {
+    width: 100%;
+  }
+
+  .mailimage {
+    min-width: $mailcircle;
+    min-height: $mailcircle;
+    background-color: black;
+    border-radius: 50%;
+    margin: 0 10px 0 5px;
+  }
+
+  .mailheader {
+    justify-content: space-between;
+
+    .mailtitle {
+      font-family: $textfontfamily;
+      font-size: $mailtitle;
+      font-weight: $textregular;
     }
 
-    .mailheader{
-        justify-content: space-between;
+    .maildate {
+      font-size: $mailtitle;
+      padding-right: 10px;
+    }
+  }
 
-        .mailtitle{
-            font-family: $textfontfamily;
-            font-size: $mailtitle;
-            font-weight: $textregular;
-        }
-        .maildate{
-            font-size: $mailtitle;
-            padding-right: 10px;
-        }
-    }
-    .mailsubject{
-        font-family: $textfontfamily;
-        font-size: $mailsubject;
-        font-weight: $textlight;
-    }
-    .mailtext{
-        font-family: $textfontfamily;
-        font-size: $mailtext;
-        max-height: 15px;
-        word-break: break-all;
-    }
+  .mailsubject {
+    font-family: $textfontfamily;
+    font-size: $mailsubject;
+    font-weight: $textlight;
+  }
+
+  .mailtext {
+    font-family: $textfontfamily;
+    font-size: $mailtext;
+    max-height: 15px;
+    word-break: break-all;
+  }
 }
 
 .mailitem + .mailitem {
-    border-top: 1px solid rgba($color: white, $alpha: 0.15);
+  border-top: 1px solid rgba($color: white, $alpha: 0.15);
 }
 
 /////////////////////EVENTS //////////////////////
 
-.events{
-    max-height: 400px;
-    border-radius: $border-radius;
-    background-color: $lightbackground;
+.events {
+  max-height: 400px;
+  border-radius: $border-radius;
+  background-color: $lightbackground;
 
-    li + li{
-        border-top: 1px solid rgba($color: white, $alpha: 0.2);
-    }
+  li + li {
+    border-top: 1px solid rgba($color: white, $alpha: 0.2);
+  }
 }
 
-.block-header{
-    border-radius: $border-radius;
-    background-color: $backgroundcolor;
-    color: $textcolor;
-    justify-content: space-between;
+.block-header {
+  border-radius: $border-radius;
+  background-color: $backgroundcolor;
+  color: $textcolor;
+  justify-content: space-between;
 
-    button{
-        width: 24px;
-        height: 24px;
-        background-color: #70798C;
-        padding: 3px;
-        border: 1px solid rgba($color: #70798C, $alpha: 0.5);
-        border-radius: 3px;
-        margin-right: 20px;
-    }
-    p{
-        margin: 0;
-        padding: 15px 10px 15px 20px;
-    }
+  button {
+    width: 24px;
+    height: 24px;
+    background-color: #70798c;
+    padding: 3px;
+    border: 1px solid rgba($color: #70798c, $alpha: 0.5);
+    border-radius: 3px;
+    margin-right: 20px;
+  }
 
+  p {
+    margin: 0;
+    padding: 15px 10px 15px 20px;
+  }
 }
 
-.list{
-    padding: 10px 0;
-    justify-content: space-between;
-    color: $textcolor;
-    font-weight: $textlight;
+.list {
+  padding: 10px 0;
+  justify-content: space-between;
+  color: $textcolor;
+  font-weight: $textlight;
 
-    .eventdate{
-        font-size: $mailsubject;
-        margin-left: 10px;
+  .eventdate {
+    font-size: $mailsubject;
+    margin-left: 10px;
+  }
+
+  .flexcolumn {
+    margin-left: 10px;
+  }
+
+  .eventstitle {
+    margin: 12px 0;
+    font-size: $mailsubject;
+  }
+
+  .eventtext {
+    font-size: $mailtext;
+    font-weight: $textregular;
+  }
+
+  .eventutils {
+    margin-right: 10px;
+
+    i {
+      margin: 0 10px;
     }
-
-    .flexcolumn{
-
-        margin-left: 10px;
-    }
-
-    .eventstitle{
-        margin: 12px 0;
-        font-size: $mailsubject;
-    }
-
-    .eventtext{
-        font-size: $mailtext;
-        font-weight: $textregular;
-    }
-    .eventutils{
-        margin-right: 10px;
-
-        i{
-            margin: 0 10px;
-        }
-    }
+  }
 }
 
 ///////////////TICKETS ////////////////////
-.tickets{
-    border-radius: $border-radius;
-    background-color: $lightbackground;
+.tickets {
+  border-radius: $border-radius;
+  background-color: $lightbackground;
 }
 
-.ticket{
-    color: $textcolor;
-    .ticket-open{
-        padding: 10px;
+.ticket {
+  color: $textcolor;
+  font-weight: $textlight;
+  justify-content: space-between;
 
-        i{
-            color: $iconcolor;
-        }
-    }
+  .ticket-open {
+    padding: 10px;
 
-    button{
-        width: 24px;
-        height: 24px;
-        padding: 3px;
-        margin-right: 20px;
-        background: transparent;
-        color: $iconcolor;
+    i {
+      color: $iconcolor;
     }
+  }
+
+  button {
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    margin-right: 20px;
+    background: transparent;
+    color: $iconcolor;
+  }
 }
 
 .tickets-body + .tickets-body {
-    border-top: 1px solid rgba($color: white, $alpha: 0.2);
+  border-top: 1px solid rgba($color: white, $alpha: 0.2);
 }
 
-.collapsible{
-    padding:0 10px;
-    height:0;
-    overflow: hidden;
-    transition: all 0.2s ease-in-out;
-    
-    p{
-        margin: 0;
-        color: $textcolor;
-    }
+.collapsible {
+  padding: 0 10px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+
+  p {
+    margin: 0;
+    color: $textcolor;
+  }
 }
 
-.down{
-    padding:10px;
-    height: auto;
+.down {
+  padding: 10px;
+  height: auto;
 }
 
 /////////////////ORDERS /////////////////
-.table-row{
-    padding: 7px 0;
+.table-row {
+  padding: 7px 10px;
 }
 
 .table-row + .table-row {
-    border-top: 1px solid rgba($color: white, $alpha: 0.2);
+  border-top: 1px solid rgba($color: white, $alpha: 0.2);
 }
 
-.table-order{
-    background-color: $lightbackground;
-    margin-top: 7px;
-    padding: 0 10px;
-    border-radius: $border-radius;
+.table-order {
+  background-color: $lightbackground;
+  margin-top: 7px;
+  border-radius: $border-radius;
 }
 
-.table-header{
-    color: $textcolor;
-    font-family: $textfontfamily;
-    font-weight: $textregular;
-    padding: 10px 0;
+.table-header {
+  background-color: $backgroundcolor;
+  border-radius: $border-radius;
+  color: $textcolor;
+  font-family: $textfontfamily;
+  font-weight: $textregular;
+  padding: 10px 10px;
 
-    .header-id{
-        display: none;
-    }
+  .header-id {
+    display: none;
+  }
 
-    .header-client{
-        width: 60%;
-    }
-
-    .header-number{
-        display: none;
-    }
-
-    .header-value{
-        width: 20%;
-    }
-
-    .header-date{
-        width: 20%;
-    }
-}
-
-.client{
+  .header-client {
     width: 60%;
-    font-family: $textfontfamily;
-    font-weight: $textlight;
-    font-size: 0.75rem;
-    color: $textcolor;
+  }
+
+  .header-number {
+    display: none;
+  }
+
+  .header-value {
+    width: 20%;
+  }
+
+  .header-date {
+    width: 20%;
+  }
 }
 
-.value{
-    width: 20%;
-    font-family: $textfontfamily;
-    font-weight: $textlight;
-    font-size: 0.75rem;
-    color: $textcolor;
+.client {
+  width: 60%;
+  font-family: $textfontfamily;
+  font-weight: $textlight;
+  font-size: 0.75rem;
+  color: $textcolor;
 }
 
-.date{
-    width: 20%;
-    font-family: $textfontfamily;
-    font-weight: $textlight;
-    font-size: 0.75rem;
-    color: $textcolor;
+.value {
+  width: 20%;
+  font-family: $textfontfamily;
+  font-weight: $textlight;
+  font-size: 0.75rem;
+  color: $textcolor;
+}
+
+.date {
+  width: 20%;
+  font-family: $textfontfamily;
+  font-weight: $textlight;
+  font-size: 0.75rem;
+  color: $textcolor;
+}
+
+//////// HOME CHART /////////////
+.chart {
+  max-width: 100%;
 }

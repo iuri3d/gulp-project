@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
-    <link rel="stylesheet" href="/css/style.css?cb=1584013384769">
+    <link rel="stylesheet" href="/dist/style.css?cb=1584013384769">
 </head>
 <body>
     
@@ -74,8 +74,7 @@
                     </span><span class="collapse">Definições</span>
                 </a>
             </div>
-        </nav>
-        
+        </nav>   
         <div class="contentbox">
             <div class="topbar">
                 <div class="user d-flex">
@@ -104,7 +103,7 @@
                     </div>
                 </div>
                 <div class="bigrow">
-                    <div class="emails block-header gap">
+                    <div class="emails block-header gap break">
                         <p>Caixa de Entrada</p>
                         <div class="mailitem d-flex align-center p-5">
                             <div class="mailimage d-flex align-center just-center">H</div>
@@ -162,7 +161,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="events gap">
+                    <div class="events gap break">
                         <div class="block-header d-flex align-center">
                             <p class="eventstitle">Próximos Eventos</p>
                             <button class="d-flex align-center just-center" aria-label="Add Event">
@@ -238,7 +237,7 @@
                                 </li>
                             </ol>                              
                     </div>
-                    <div class="tickets gap">
+                    <div class="tickets gap break">
                         <div class="block-header d-flex align-center">
                             <p class="">Pedidos</p>
                             <button type="button"><i class="fas fa-plus"></i></button>
@@ -278,9 +277,10 @@
                         </div>
 
                     </div>
-                </div>
-                <div class="bigrow">
-                    <div class="table-order">
+                    <div class="chart break">
+                        <canvas id="home-chart"></canvas>
+                    </div>
+                    <div class="table-order break break-large">
                         <div class="table-header d-flex">
                             <div class="header-id">Id</div>
                             <div class="header-client">Cliente</div>
@@ -316,15 +316,15 @@
                                 <div class="order-date date">10/08</div>
                             </div>
                         </div>
-                    </div>
+                    </div>  
                 </div>
             </div>
-        </div>
-        
+        </div>    
     </div>
 
 
     <script src="https://kit.fontawesome.com/6d7f575d6e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="/js/script.js?cb=1584013384769"></script>
 </body>

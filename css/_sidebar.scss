@@ -1,63 +1,63 @@
 
 /////// SIDE BAR /////////
-.sidebar{
-    list-style: none;
-    position: fixed;
-    height: 100%;
-    background-color: $backgroundcolor;
-    transition: all 0.2s ease-in-out;
+.sidebar {
+  list-style: none;
+  position: fixed;
+  height: 100%;
+  background-color: $backgroundcolor;
+  transition: all 0.2s ease-in-out;
 
-    &.open{
-        width: 200px;
-
-        .collapse{
-            display: flex;
-        }
-    }
-
-    .header{
-        color: $textcolor;
-        text-decoration: none;
-        cursor: pointer;
-        justify-content: space-between;
-        padding: 0 7px;
-        height: 60px;
-
-        .logo{
-            padding: 0 25px;
-            font-size: 1.25rem;
-        }
-    }
-
-    .collapse{
-        display: none;
-        transition: all 0.15s ease-in-out;
-    }
-
-    a + a + a{
-        border-top: 1px solid rgba($color: white, $alpha: 0.1);
-    }
-}
-
-.icon{
-    padding: 0 15px;
-    border: 0;
-    background-color: transparent;
-    font-size: 1rem;
-
-    .fas{
-        color: $iconcolor;
-    }
-}
-
-.sidebaritem{
-    padding: 10px 5px;
-    font-weight: $textlight;
-    text-decoration: none;
-    color: $textcolor;
+  .collapse {
+    display: none;
     transition: all 0.15s ease-in-out;
+  }
 
-    &:hover{
-        background-color: $sidebarhover;
+  &.open {
+    width: 200px;
+
+    .collapse {
+      display: flex;
     }
+  }
+
+  .header {
+    color: $textcolor;
+    text-decoration: none;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 0 7px;
+    height: 60px;
+
+    .logo {
+      padding: 0 25px;
+      font-size: 1.25rem;
+    }
+  }
+
+  a + a + a {
+    border-top: 1px solid rgba($color: white, $alpha: 0.1);
+  }
+}
+
+.icon {
+  padding: 0 15px;
+  border: 0;
+  background-color: transparent;
+  font-size: 1rem;
+
+  .fas {
+    color: $iconcolor;
+  }
+}
+
+.sidebaritem {
+  padding: 10px 5px;
+  font-weight: $textlight;
+  text-decoration: none;
+  color: $textcolor;
+  transition: all 0.15s ease-in-out;
+
+  & :hover {
+    background-color: $sidebarhover;
+  }
 }
