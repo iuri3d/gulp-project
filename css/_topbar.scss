@@ -36,4 +36,56 @@
       margin: 0 10px;
     }
   }
+
+  .notifications {
+    position: relative;
+  }
+
+  .notifications-pop{
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 170px;
+    min-width: 300px;
+    background-color: $backgroundcolor;
+    border: 1px solid $lightbackground;
+    box-shadow: 3px 3px 2px $mainbackgroundcolor;
+    border-radius: $border-radius;
+
+    .notifications-header {
+      padding: 10px 15px;
+      a {
+        text-decoration: none;
+        color: $textcolor;
+      }
+    }
+
+    .notification-item {
+      padding: 10px;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        background-color: $sidebarhover;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.875rem;
+        font-family: $textfontfamily;
+      }
+    }
+
+    .notification-item + .notification-item {
+      border-top: 1px solid rgba($color: white, $alpha: 0.1);
+    }
+
+    &.active{
+      display: block;
+    }
+  }
 }

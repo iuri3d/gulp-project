@@ -6,17 +6,30 @@
   height: 100%;
   background-color: $backgroundcolor;
   transition: all 0.2s ease-in-out;
+  width: 50px;
 
   .collapse {
-    display: none;
-    transition: all 0.15s ease-in-out;
+    display: flex;
+    opacity: 0;
+    width: 0;
+    padding: 0;
+    transition: all 0.2s ease-in-out;
   }
 
   &.open {
     width: 200px;
 
+    .header {
+      justify-content: space-between;
+
+      .logo {
+        padding: 0 16px;
+      }
+    }
+
     .collapse {
-      display: flex;
+      opacity: 1;
+      width: auto;
     }
   }
 
@@ -24,12 +37,13 @@
     color: $textcolor;
     text-decoration: none;
     cursor: pointer;
-    justify-content: space-between;
     padding: 0 7px;
     height: 60px;
+    align-items: center;
+    justify-content: center;
+
 
     .logo {
-      padding: 0 25px;
       font-size: 1.25rem;
     }
   }
@@ -40,10 +54,15 @@
 }
 
 .icon {
-  padding: 0 15px;
   border: 0;
   background-color: transparent;
   font-size: 1rem;
+  z-index: 10;
+  width: 50px;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .fas {
     color: $iconcolor;
@@ -51,13 +70,15 @@
 }
 
 .sidebaritem {
-  padding: 10px 5px;
+  padding: 10px 0;
   font-weight: $textlight;
   text-decoration: none;
   color: $textcolor;
   transition: all 0.15s ease-in-out;
+  align-items: center;
+  
 
-  & :hover {
+  &:hover {
     background-color: $sidebarhover;
   }
 }

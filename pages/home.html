@@ -83,28 +83,71 @@
                 </div>
                 <div class="alerts d-flex align-center">
                     <div class="messages"><i class="fas fa-comments"></i></div>
-                    <div class="notifications"><i class="fas fa-bell"></i></div>
+                    <a class="notifications">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                    <div class="notifications-pop">
+                        <div class="notifications-header">
+                            <a href="#">Notificações</a>
+                        </div>
+                        <div class="notification-item d-flex align-center">
+                            <i class="fas fa-envelope"></i>
+                            <p>Tem uma mensagem nova!</p>
+                        </div>
+                        <div class="notification-item d-flex align-center">
+                            <i class="fas fa-calendar-alt"></i>
+                            <p>Tem um evento novo!</p>
+                        </div>
+                        <div class="notification-item d-flex align-center">
+                            <i class="fas fa-tag"></i>
+                            <p>Tem um pedido novo!</p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div class="maincontent">
                 <div class="smallrow">
-                    <div class="sale-objectives gap">
-                        <p>Objectivos</p>
+                    <div class="sale-objectives border gap">
+                        <div class="sale-objectives-header d-flex align-center">
+                            <p>Objectivos</p>
+                            <select name="sale-objectives-month" id="">
+                                <option value="january">Janeiro</option>
+                                <option value="february">Fevereiro</option>
+                                <option value="march">Março</option>
+                                <option value="april">Abril</option>
+                                <option value="may">Maio</option>
+                                <option value="june">Junho</option>
+                                <option value="july">Julho</option>
+                                <option value="august">Agosto</option>
+                                <option value="september">Setembro</option>
+                                <option value="october">Outubro</option>
+                                <option value="november">Novembro</option>
+                                <option value="december">Dezembro</option>
+                            </select>
+                        </div>
                         <div class="progressbar">
                             <div class="bar d-flex align-center">45%</div>
                         </div>
+                        <div class="sale-objectives-footer">
+                            <p>12583€ / 25000€</p>
+                        </div>
                     </div>
-                    <div class="weather flex-item gap">Meteo</div>
-                    <div class="social d-flex align-center just-center flex-item gap">
-                        <p class="p-5">2568 Seguidores</p>
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
+                    <div class="weather flex-item border gap">Meteo</div>
+                    <div class="social d-flex align-center flex-item gap">
+                        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="bigrow">
-                    <div class="emails block-header gap break">
-                        <p>Caixa de Entrada</p>
+                    <div class="emails border gap break">
+                        <div class="mailbox d-flex align-center">
+                            <p>Compor</p>
+                            <button class="d-flex align-center just-center plus-button" aria-label="Add Event">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
                         <div class="mailitem d-flex align-center p-5">
                             <div class="mailimage d-flex align-center just-center">H</div>
                             <div class="mailcontent">
@@ -161,10 +204,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="events gap break">
+                    <div class="events border gap break">
                         <div class="block-header d-flex align-center">
                             <p class="eventstitle">Próximos Eventos</p>
-                            <button class="d-flex align-center just-center" aria-label="Add Event">
+                            <button class="d-flex align-center just-center plus-button" aria-label="Add Event">
                                 <i class="fas fa-plus"></i>
                             </button>
                             
@@ -172,7 +215,7 @@
                             <ol>
                                 <li class="list d-flex p-5">
                                     <div class="eventmain d-flex align-center">
-                                        <div class="eventdate">15/6</div>
+                                        <div class="eventdate d-flex align-center just-center border-red">15/6</div>
                                         <div class="flexcolumn">
                                             <div class="eventtitle">Contactar XPTO</div>
                                             <div class="eventtext">Comprar Papel</div>
@@ -185,7 +228,7 @@
                                 </li>
                                 <li class="list d-flex p-5">
                                     <div class="eventmain d-flex align-center">
-                                        <div class="eventdate">15/6</div>
+                                        <div class="eventdate d-flex align-center just-center border-red">15/6</div>
                                         <div class="flexcolumn">
                                             <div class="eventtitle">Contactar XPTO</div>
                                             <div class="eventtext">Comprar Papel</div>
@@ -198,7 +241,7 @@
                                 </li>
                                 <li class="list d-flex p-5">
                                     <div class="eventmain d-flex align-center">
-                                        <div class="eventdate">15/6</div>
+                                        <div class="eventdate d-flex align-center just-center border-red">15/6</div>
                                         <div class="flexcolumn">
                                             <div class="eventtitle">Contactar XPTO</div>
                                             <div class="eventtext">Comprar Papel</div>
@@ -211,7 +254,7 @@
                                 </li>
                                 <li class="list d-flex p-5">
                                     <div class="eventmain d-flex align-center">
-                                        <div class="eventdate">15/6</div>
+                                        <div class="eventdate d-flex align-center just-center border-red">15/6</div>
                                         <div class="flexcolumn">
                                             <div class="eventtitle">Contactar XPTO</div>
                                             <div class="eventtext">Comprar Papel</div>
@@ -224,7 +267,7 @@
                                 </li>
                                 <li class="list d-flex p-5">
                                     <div class="eventmain d-flex align-center">
-                                        <div class="eventdate">15/6</div>
+                                        <div class="eventdate d-flex align-center just-center border-green">15/6</div>
                                         <div class="flexcolumn">
                                             <div class="eventtitle">Contactar XPTO</div>
                                             <div class="eventtext">Comprar Papel</div>
@@ -235,12 +278,26 @@
                                         <i class="fas fa-trash"></i>
                                     </div>
                                 </li>
+                                <li class="list d-flex p-5">
+                                    <div class="eventmain d-flex align-center">
+                                        <div class="eventdate d-flex align-center just-center border-green">15/6</div>
+                                        <div class="flexcolumn">
+                                            <div class="eventtitle">Contactar XPTO</div>
+                                            <div class="eventtext">Comprar Papel</div>
+                                        </div>
+                                    </div>
+                                    <div class="eventutils d-flex align-center">
+                                        <i class="fas fa-cog"></i>
+                                        <i class="fas fa-trash"></i>
+                                    </div>
+                                </li>
+                                
                             </ol>                              
                     </div>
-                    <div class="tickets gap break">
+                    <div class="tickets border gap break mlTickets">
                         <div class="block-header d-flex align-center">
                             <p class="">Pedidos</p>
-                            <button type="button"><i class="fas fa-plus"></i></button>
+                            <button type="button" class="d-flex align-center just-center"><i class="fas fa-plus"></i></button>
                         </div>
                         <div class="tickets-body">
                             <div class="ticket d-flex align-center">
@@ -276,11 +333,31 @@
                             </div>
                         </div>
 
+                        <div class="modal-ticket" id="new-ticket">
+                            <div class="modal-ticket-content">
+                                <div class="modal-ticket-header">
+                                    <p>Criar Pedido</p>
+                                </div>
+                                <div class="modal-ticket-body">
+                                    <form action="#">
+                                        <label for="title">Título</label>
+                                        <input type="text" name="title" id="">
+                                        <label for="description">Descrição</label>
+                                        <input type="text" name="description" id="" placeholder="Descrição do pedido ou problema">
+                                        <div class="modal-ticket-button d-flex">
+                                            <button class="d-flex align-center">Cancelar</button>
+                                            <button type="submit">Criar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="chart break">
+                    <div class="chart border gap break mlChart">
                         <canvas id="home-chart"></canvas>
                     </div>
-                    <div class="table-order break break-large">
+                    <div class="table-order border gap break break-large mlTable">
                         <div class="table-header d-flex">
                             <div class="header-id">Id</div>
                             <div class="header-client">Cliente</div>

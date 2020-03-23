@@ -5,6 +5,7 @@
 @import '_topbar';
 @import '_maincontent';
 @import '_queries';
+@import '_modal';
 
 html {
   box-sizing: border-box;
@@ -20,7 +21,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  background-color: white;
+  background-color: $mainbackgroundcolor;
 }
 
 button {

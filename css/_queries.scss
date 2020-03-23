@@ -1,33 +1,4 @@
 
-@media screen and (min-width: 1025px) {
-  .container {
-    display: flex;
-
-    .login {
-      width: 50%;
-      height: 100vh;
-      font-size: 5rem;
-    }
-  }
-
-  .bigrow {
-    .break {
-      width: calc(100% / 3);
-      height: 400px;
-    }
-
-    .break-large {
-      width: calc(100% / 3 * 2) !important;
-    }
-  }
-
-  .contentbox {
-    &.open {
-      margin-left: 200px;
-    }
-  }
-}
-
 @media screen and (min-width: 600px) {
   .smallrow {
     display: flex;
@@ -51,12 +22,63 @@
     flex-wrap: wrap;
     width: 100%;
 
+    .gap + .gap {
+      margin-left: 7px;
+    }
+
+    .mlTickets,
+    .mlTable {
+      margin-left: 0 !important;
+    }
+
     .break-large {
       width: 100%;
     }
   }
 
   .break {
-    width: calc(100% / 2);
+    width: calc((100% - 7px) / 2);
+  }
+
+  .header-id {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container {
+    display: flex;
+
+    .login {
+      width: 50%;
+      height: 100vh;
+      font-size: 5rem;
+    }
+  }
+
+  .bigrow {
+    .break {
+      width: calc((100% - 14px) / 3);
+      height: 400px;
+    }
+
+    .mlTickets,
+    .mlTable {
+      margin-left: 7px !important;
+    }
+
+    .mlChart {
+      margin-left: 0 !important;
+    }
+
+    .break-large {
+      width: calc((100% - 7px) / 3 * 2) !important;
+    }
+  }
+
+  .contentbox {
+    &.open {
+      margin-left: 200px;
+    }
   }
 }

@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+    
     //////////////Display Login Modal/////////
     $('.login').on('click', function(){
         $('#myModal').css('display', 'flex');
@@ -19,14 +20,21 @@ $(document).ready(function(){
     $(".hamburger").click(function() {
         $(".sidebar").toggleClass("open");
         $(".contentbox").toggleClass("open");
-    
+
+        /* FOR GRAPHICS TO FIT IN DIV */
+        var chartWidth = $('.chart').width();
+        $('#home-chart').css('width',chartWidth);        
+    });
+
+    $('.notifications').on('click', function(){
+        $('.notifications-pop').toggleClass('active');
     });
 
 
     const homeChart = document.getElementById("home-chart").getContext('2d');
 
     let chart01 = new Chart ( homeChart, {
-        type: 'bar',
+        type: 'horizontalBar',
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
@@ -51,7 +59,7 @@ $(document).ready(function(){
             borderWidth: 1
         }]
     },
-    responsive:true,
+    responsive: true,
     maintainAspectRatio: false,
     options: {
         scales: {
@@ -63,6 +71,21 @@ $(document).ready(function(){
         }
     }
     });
+
+   /*  openCloseSidebar();
+
+    function openCloseSidebar(){
+        if ( $(window).width() > 1024 ) {
+            $('.sidebar').addClass('open');
+        }
+        else {
+            $('.sidebar').removeClass('open');
+        }
+    }
+    
+    $( window ).resize(function() {
+        openCloseSidebar();
+    }); */
 
 
 })
