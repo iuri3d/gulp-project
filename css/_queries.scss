@@ -39,20 +39,63 @@
   .break {
     width: calc((100% - 7px) / 2);
   }
-
-  .header-id {
-    display: block !important;
+  
+  .table-order {
+    text-align: center;
   }
+
+  .table-header {
+    .header-id {
+      display: block;
+      width: 5%;
+    }
+
+    .header-client {
+      width: 50%;
+    }
+
+    .header-number {
+      display: block;
+      width: 20%;
+    }
+    .header-value {
+      width: 15%;
+    }
+
+    .header-date {
+      width: 10%;
+    }
+  }
+  .id {
+    display: block;
+    width: 5%;
+  }
+  
+  .client {
+    width: 50%;
+  }
+  
+  .number {
+    display: block;
+    width: 20%;
+  }
+  
+  .value {
+    width: 15%;
+  }
+  
+  .date {
+    width: 10%;
+  }
+  
 }
 
 @media screen and (min-width: 1025px) {
-  .container {
-    display: flex;
-
+  .container-login {
     .login {
       width: 50%;
       height: 100vh;
-      font-size: 5rem;
+      font-size: 4rem;
     }
   }
 

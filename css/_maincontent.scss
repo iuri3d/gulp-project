@@ -190,7 +190,7 @@
     border-top: 1px solid rgba($color: white, $alpha: 0.2);
   }
 }
-
+////Header class for all blocks /////
 .block-header {
   border-radius: $border-radius;
   background-color: $backgroundcolor;
@@ -227,7 +227,7 @@
   }
 
   .eventtitle {
-    font-size: $font10;
+    font-size: $font12;
     font-weight: $textregular;
   }
 
@@ -250,14 +250,20 @@
   border-radius: $border-radius;
   background-color: $lightbackground;
 }
+.tickets-overflow {
+  overflow: auto;
+  height: calc(100% -50px);
+}
 
 .ticket {
   color: $textcolor;
   font-weight: $textlight;
   justify-content: space-between;
+  height: 49px;
 
   .ticket-open {
-    padding: 10px;
+    height: 100%;
+    width: 50px;
 
     i {
       color: $iconcolor;
@@ -265,12 +271,23 @@
   }
 
   button {
-    width: 24px;
-    height: 24px;
-    padding: 3px;
-    margin-right: 20px;
+    font-size: $iconfontsize;
+    padding: 0 10px;
+    height: 100%;
     background: transparent;
     color: $iconcolor;
+  }
+
+  .ticket-subject {
+    margin: 0;
+    font-size: $font14;
+    font-weight: $textregular;
+  }
+
+  .ticket-state {
+    font-size: $font10;
+    font-weight: $textlight;
+    color: $inprogress;
   }
 }
 
@@ -315,10 +332,6 @@
 }
 
 /////////////////ORDERS /////////////////
-.table-row {
-  padding: 7px 10px;
-}
-
 .table-row + .table-row {
   border-top: 1px solid rgba($color: white, $alpha: 0.2);
 }
@@ -327,6 +340,14 @@
   background-color: $lightbackground;
   margin-top: 7px;
   border-radius: $border-radius;
+
+  & > div:nth-child(2n + 3){
+    background-color: $backgroundcolor;
+
+    &:hover {
+      background-color: $sidebarhover;
+    }
+  }
 }
 
 .table-header {
@@ -358,28 +379,41 @@
   }
 }
 
+.table-row {
+  padding: 7px 10px;
+  height: 50px;
+
+  &:hover {
+    background-color: $sidebarhover;
+  }
+}
+
+.order {
+  font-size: $font12;
+  font-weight: $textlight;
+  color: $textcolor;
+  height: 100%;
+  align-items: center;
+}
+
+.id {
+  display: none;
+}
+
 .client {
   width: 60%;
-  font-family: $textfontfamily;
-  font-weight: $textlight;
-  font-size: 0.75rem;
-  color: $textcolor;
+}
+
+.number {
+  display: none;
 }
 
 .value {
   width: 20%;
-  font-family: $textfontfamily;
-  font-weight: $textlight;
-  font-size: 0.75rem;
-  color: $textcolor;
 }
 
 .date {
   width: 20%;
-  font-family: $textfontfamily;
-  font-weight: $textlight;
-  font-size: 0.75rem;
-  color: $textcolor;
 }
 
 //////// HOME CHART /////////////

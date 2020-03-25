@@ -33,18 +33,24 @@ ol {
 .border-green {
   border-left: 5px solid rgba(0, 191, 42, 0.5); }
 
-.container {
-  height: 100%; }
-  .container .login {
+.container-login {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+  .container-login .login {
     padding: 0;
     width: 100%;
     height: 50vh;
+    padding: 25px;
     border: 1px solid rgba(49, 52, 82, 0.2);
     background-color: #1e1e2f;
     font-family: 'Open Sans', sans-serif;
     color: white;
     font-size: 1.8rem;
-    text-shadow: 1px 1px #3a3c53; }
+    text-shadow: 1px 1px #3a3c53;
+    cursor: pointer; }
+    .container-login .login:hover {
+      background-color: #454569; }
 
 /* The Modal (background) */
 .modal {
@@ -180,7 +186,8 @@ ol {
   height: 100%;
   background-color: #2a2a3f;
   transition: all 0.2s ease-in-out;
-  width: 50px; }
+  width: 50px;
+  overflow: hidden; }
   .sidebar .collapse {
     display: flex;
     opacity: 0;
@@ -453,7 +460,7 @@ ol {
     .list .flexcolumn div + div {
       margin-top: 5px; }
   .list .eventtitle {
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     font-weight: 400; }
   .list .eventtext {
     font-size: 0.625rem;
@@ -467,21 +474,34 @@ ol {
   border-radius: 3px;
   background-color: #3a3c53; }
 
+.tickets-overflow {
+  overflow: auto;
+  height: calc(100% -50px); }
+
 .ticket {
   color: white;
   font-weight: 300;
-  justify-content: space-between; }
+  justify-content: space-between;
+  height: 49px; }
   .ticket .ticket-open {
-    padding: 10px; }
+    height: 100%;
+    width: 50px; }
     .ticket .ticket-open i {
       color: #d0d2da; }
   .ticket button {
-    width: 24px;
-    height: 24px;
-    padding: 3px;
-    margin-right: 20px;
+    font-size: 1rem;
+    padding: 0 10px;
+    height: 100%;
     background: transparent;
     color: #d0d2da; }
+  .ticket .ticket-subject {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 400; }
+  .ticket .ticket-state {
+    font-size: 0.625rem;
+    font-weight: 300;
+    color: #c0c0c0; }
 
 .tickets-body + .tickets-body {
   border-top: 1px solid rgba(255, 255, 255, 0.2); }
@@ -515,9 +535,6 @@ ol {
     width: 400px;
     background-color: #3a3c53; }
 
-.table-row {
-  padding: 7px 10px; }
-
 .table-row + .table-row {
   border-top: 1px solid rgba(255, 255, 255, 0.2); }
 
@@ -525,6 +542,10 @@ ol {
   background-color: #3a3c53;
   margin-top: 7px;
   border-radius: 3px; }
+  .table-order > div:nth-child(2n + 3) {
+    background-color: #2a2a3f; }
+    .table-order > div:nth-child(2n + 3):hover {
+      background-color: #454569; }
 
 .table-header {
   background-color: #2a2a3f;
@@ -544,80 +565,43 @@ ol {
   .table-header .header-date {
     width: 20%; }
 
-.client {
-  width: 60%;
-  font-family: "Open Sans";
-  font-weight: 300;
+.table-row {
+  padding: 7px 10px;
+  height: 50px; }
+  .table-row:hover {
+    background-color: #454569; }
+
+.order {
   font-size: 0.75rem;
-  color: white; }
+  font-weight: 300;
+  color: white;
+  height: 100%;
+  align-items: center; }
+
+.id {
+  display: none; }
+
+.client {
+  width: 60%; }
+
+.number {
+  display: none; }
 
 .value {
-  width: 20%;
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 0.75rem;
-  color: white; }
+  width: 20%; }
 
 .date {
-  width: 20%;
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 0.75rem;
-  color: white; }
+  width: 20%; }
 
 .chart {
   max-width: 100%; }
 
-@media screen and (min-width: 600px) {
-  .smallrow {
-    display: flex; }
-    .smallrow .gap + .gap {
-      margin-top: 0;
-      margin-left: 7px; }
+.calendar-settings {
+  height: 80px;
+  width: 100%;
+  border-radius: 3px;
+  background-color: #2a2a3f; }
 
-  .sale-objectives,
-  .weather,
-  .social {
-    width: calc(100% / 3); } }
-@media screen and (min-width: 768px) {
-  .bigrow {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%; }
-    .bigrow .gap + .gap {
-      margin-left: 7px; }
-    .bigrow .mlTickets,
-    .bigrow .mlTable {
-      margin-left: 0 !important; }
-    .bigrow .break-large {
-      width: 100%; }
-
-  .break {
-    width: calc((100% - 7px) / 2); }
-
-  .header-id {
-    display: block !important; } }
-@media screen and (min-width: 1025px) {
-  .container {
-    display: flex; }
-    .container .login {
-      width: 50%;
-      height: 100vh;
-      font-size: 5rem; }
-
-  .bigrow .break {
-    width: calc((100% - 14px) / 3);
-    height: 400px; }
-  .bigrow .mlTickets,
-  .bigrow .mlTable {
-    margin-left: 7px !important; }
-  .bigrow .mlChart {
-    margin-left: 0 !important; }
-  .bigrow .break-large {
-    width: calc((100% - 7px) / 3 * 2) !important; }
-
-  .contentbox.open {
-    margin-left: 200px; } }
 .modal-compose,
 .modal-event,
 .modal-tickets {
@@ -699,6 +683,84 @@ ol {
   border-bottom: 10px solid transparent;
   border-left: 15px solid #3a3c53; }
 
+@media screen and (min-width: 600px) {
+  .smallrow {
+    display: flex; }
+    .smallrow .gap + .gap {
+      margin-top: 0;
+      margin-left: 7px; }
+
+  .sale-objectives,
+  .weather,
+  .social {
+    width: calc(100% / 3); } }
+@media screen and (min-width: 768px) {
+  .bigrow {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; }
+    .bigrow .gap + .gap {
+      margin-left: 7px; }
+    .bigrow .mlTickets,
+    .bigrow .mlTable {
+      margin-left: 0 !important; }
+    .bigrow .break-large {
+      width: 100%; }
+
+  .break {
+    width: calc((100% - 7px) / 2); }
+
+  .table-order {
+    text-align: center; }
+
+  .table-header .header-id {
+    display: block;
+    width: 5%; }
+  .table-header .header-client {
+    width: 50%; }
+  .table-header .header-number {
+    display: block;
+    width: 20%; }
+  .table-header .header-value {
+    width: 15%; }
+  .table-header .header-date {
+    width: 10%; }
+
+  .id {
+    display: block;
+    width: 5%; }
+
+  .client {
+    width: 50%; }
+
+  .number {
+    display: block;
+    width: 20%; }
+
+  .value {
+    width: 15%; }
+
+  .date {
+    width: 10%; } }
+@media screen and (min-width: 1025px) {
+  .container-login .login {
+    width: 50%;
+    height: 100vh;
+    font-size: 4rem; }
+
+  .bigrow .break {
+    width: calc((100% - 14px) / 3);
+    height: 400px; }
+  .bigrow .mlTickets,
+  .bigrow .mlTable {
+    margin-left: 7px !important; }
+  .bigrow .mlChart {
+    margin-left: 0 !important; }
+  .bigrow .break-large {
+    width: calc((100% - 7px) / 3 * 2) !important; }
+
+  .contentbox.open {
+    margin-left: 200px; } }
 html {
   box-sizing: border-box;
   font-size: 100%; }
