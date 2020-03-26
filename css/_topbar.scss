@@ -34,26 +34,35 @@
     .messages,
     .notifications {
       margin: 0 10px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover{
+        color:  #aaaeb7;
+      }
     }
   }
 
   .notifications {
-    position: relative;
+    position: relative;    
   }
 
   .notifications-pop{
-    display: none;
     position: absolute;
+    max-height: 0;
+    transition: max-height 0.35s ease-out;
+    overflow: hidden;
     top: 55px;
-    right: 170px;
-    min-width: 300px;
+    right: 5px;
+    min-width: 250px;
     background-color: $backgroundcolor;
-    border: 1px solid $lightbackground;
-    box-shadow: 3px 3px 2px $mainbackgroundcolor;
+    /*border: 1px solid $lightbackground;*/
+    box-shadow: 8px 8px 8px $mainbackgroundcolor;
     border-radius: $border-radius;
 
     .notifications-header {
-      padding: 10px 15px;
+      padding: 10px 20px;
+      border-bottom: 1px solid rgba($color: white, $alpha: 0.1);
       a {
         text-decoration: none;
         color: $textcolor;
@@ -61,9 +70,10 @@
     }
 
     .notification-item {
-      padding: 10px;
+      padding: 10px 20px;
       cursor: pointer;
       transition: all 0.15s ease-in-out;
+      background-color: $lightbackground;
 
       &:hover {
         background-color: $sidebarhover;
@@ -85,7 +95,8 @@
     }
 
     &.active{
-      display: block;
+      max-height: 100%;
+      transition: max-height 0.40s ease-in;
     }
   }
 }

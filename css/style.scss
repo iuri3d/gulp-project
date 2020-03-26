@@ -19,6 +19,10 @@ html {
   box-sizing: inherit;
 }
 
+*:focus {
+  outline: 0;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;

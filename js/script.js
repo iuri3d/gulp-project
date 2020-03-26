@@ -72,20 +72,22 @@ $(document).ready(function(){
     }
     });
 
-   /*  openCloseSidebar();
+    openCloseSidebar();
 
     function openCloseSidebar(){
         if ( $(window).width() > 1024 ) {
             $('.sidebar').addClass('open');
+            $('.contentbox').addClass('open');
         }
         else {
             $('.sidebar').removeClass('open');
+            $('.contentbox').removeClass('open');
         }
     }
     
     $( window ).resize(function() {
         openCloseSidebar();
-    }); */
+    });
 
 
 })

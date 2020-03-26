@@ -24,7 +24,7 @@
 /////////////////SALES/////////////////
 .sale-objectives {
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   background-color: $backgroundcolor;
   border-radius: 3px;
   padding: 10px;
@@ -34,11 +34,30 @@
     margin-bottom: 10px;
 
     select {
-      border: 1px solid white;
-      background-color: rgba($color: white, $alpha: 0.2);
-
+      background-color: #404053;
+      border: 1px solid #404053;
+      border-radius: 2px;
+      color: #ffffff;
+      padding: 5px 10px;   
+      font-size: 12px;
+      opacity: 0.8; 
+      font-weight: 100;
+      outline: none;
+      cursor: pointer;
       
+      option {
+        background-color: #404053;
+        color: #ffffff;
+        padding: 10px;
+        outline: none;
+        cursor: pointer;
+      }
     }
+
+    select:focus > option:checked {
+      background: $backgroundcolor !important;
+    }
+
   }
 
   p {
@@ -50,12 +69,14 @@
   .sale-objectives-footer {
     float: right;
     width: fit-content;
-    padding: 5px;
+    padding: 5px 10px;
     margin-top: 10px;
     font-size: $font14;
-    background-color: rgba($color: white, $alpha: 0.1);
+    background-color:#404053;
     justify-content: flex-end;
     border-radius: 2px;
+    font-size: 12px;
+    opacity: 0.8;
   }
 }
 
@@ -76,7 +97,7 @@
 
 //////////WEATHER WIDGET//////////////////
 .weather {
-  height: 100px;
+  min-height: 100px;
   color: $textcolor;
   background-color: $backgroundcolor;
   border-radius: 3px;
@@ -85,23 +106,21 @@
 /////////SOCIAL MEDIA /////////////////
 .social {
   justify-content: space-evenly;
-  height: 100px;
+  min-height: 100px;
   background-color: $backgroundcolor;
   border-radius: 3px;
   border: 1px solid rgba($color: white, $alpha: 0.2);
-  color: $textcolor;
+  
 
   a{
     padding: 5px;
-
-    :hover {
-      color: $blue;
-    }
-  }
-
-  i {
+    transition: all 0.2s ease-in-out;
     color: $iconcolor;
     font-size: $font40;
+
+    &:hover {
+      color: $blue;
+    }
   }
 }
 
@@ -118,6 +137,7 @@
   background-color: $backgroundcolor;
   color: $textcolor;
   font-family: $textfontfamily;
+  overflow: hidden;
 }
 
 .mailbox {
@@ -132,7 +152,8 @@
 
 .mailitem {
   background-color: $lightbackground;
-  height: 50px;
+  min-height: 50px;
+  padding: 10px 0;
 
   .mailcontent {
     width: 100%;
@@ -238,6 +259,7 @@
 
   .eventutils {
     margin-right: 10px;
+    cursor: pointer;
 
     i {
       margin: 0 10px;
@@ -252,7 +274,7 @@
 }
 .tickets-overflow {
   overflow: auto;
-  height: calc(100% -50px);
+  height: calc(100% - 50px);
 }
 
 .ticket {
@@ -264,6 +286,7 @@
   .ticket-open {
     height: 100%;
     width: 50px;
+    cursor: pointer;
 
     i {
       color: $iconcolor;
