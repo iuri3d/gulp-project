@@ -87,6 +87,10 @@
   .date {
     width: 10%;
   }
+
+  .product-card {
+    width: calc(50% - 7px);
+  }
   
 }
 
@@ -129,5 +133,9 @@
     .notifications-pop{
       right: 170px;
     }
+  }
+
+  .mailitem {
+    padding: 5px 0;
   }
 }

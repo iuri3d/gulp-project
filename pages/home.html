@@ -18,25 +18,25 @@
                         <i class="fas fa-bars"></i>
                     </span>
                 </a>
-                <a href="" class="sidebaritem d-flex">
+                <a href="home.html" class="sidebaritem d-flex">
                     <span class="icon">
                         <i class="fas fa-home"></i>
                     </span>
                     <span class="collapse">Home</span>
                 </a>
-                <a href="" class="sidebaritem d-flex">
+                <a href="calendar.html" class="sidebaritem d-flex">
                     <span class="icon">
                         <i class="fas fa-calendar-alt"></i>
                     </span>
                     <span class="collapse">Calendário</span>
                 </a>
-                <a href="" class="sidebaritem d-flex">
+                <a href="emails.html" class="sidebaritem d-flex">
                     <span class="icon">
                         <i class="fas fa-envelope"></i>
                     </span>
                     <span class="collapse">Emails</span>
                 </a>
-                <a href="" class="sidebaritem d-flex">
+                <a href="products.html" class="sidebaritem d-flex">
                     <span class="icon">
                         <i class="fas fa-hamburger"></i>
                     </span>
@@ -58,7 +58,7 @@
                         <i class="fas fa-address-book"></i>
                     </span><span class="collapse">Clientes</span>
                 </a>
-                <a href="" class="sidebaritem d-flex">
+                <a href="statistics.html" class="sidebaritem d-flex">
                     <span class="icon">
                         <i class="fas fa-chart-bar"></i>
                     </span><span class="collapse">Estatísticas</span>
@@ -144,19 +144,35 @@
                     <div class="emails border gap break">
                         <div class="mailbox d-flex align-center">
                             <p>Compor</p>
-                            <button class="d-flex align-center just-center plus-button" aria-label="Add Event">
+                            <button class="d-flex align-center just-center plus-button" id="compose-button" name="compose-button" aria-label="Add Event">
                                 <i class="fas fa-plus"></i>
                             </button>
                         </div>
-                        <div class="mailitem d-flex align-center p-5">
-                            <div class="mailimage d-flex align-center just-center">H</div>
-                            <div class="mailcontent">
-                                <div class="mailheader d-flex">
-                                    <div class="mailtitle">Pedro Correia</div>
-                                    <div class="maildate">15/3</div>
+
+                        <!--Mail Compose Modal-->
+                        <div id="modalCompose" class="modal">
+                            <div class="modal-compose border">
+                                <div class="modal-compose-header d-flex align-center">
+                                    <p>Compor</p>
+                                    <i class="fas fa-times close"></i>
                                 </div>
-                                <div class="mailsubject dotdotdot">Encomendar Productos</div>
-                                <div class="mailtext dotdotdot">Lorem ipsum </div>
+                                <!--Transform later into mail form-->
+                                <div class="modal-compose-body">
+                                    <div class="line d-flex align-center">
+                                        <label for="to">Destinatário</label>
+                                        <input type="text" name="to" id="">
+                                    </div>
+                                    <div class="line d-flex align-center">
+                                        <label for="subject">Assunto</label>
+                                        <input type="text" name="subject" id="">
+                                    </div>
+                                    <div class="line">
+                                        <textarea name="mail-message" placeholder="Mensagem" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-compose-footer d-flex">
+                                    <button type="submit">Enviar</button>
+                                </div>
                             </div>
                         </div>
                         <div class="mailitem d-flex align-center p-5">
@@ -203,114 +219,232 @@
                                 <div class="mailtext dotdotdot">Lorem ipsum </div>
                             </div>
                         </div>
+                        <div class="mailitem d-flex align-center p-5">
+                            <div class="mailimage d-flex align-center just-center">H</div>
+                            <div class="mailcontent">
+                                <div class="mailheader d-flex">
+                                    <div class="mailtitle">Pedro Correia</div>
+                                    <div class="maildate">15/3</div>
+                                </div>
+                                <div class="mailsubject dotdotdot">Encomendar Productos</div>
+                                <div class="mailtext dotdotdot">Lorem ipsum </div>
+                            </div>
+                        </div>                        
                     </div>
                     <div class="events border gap break">
                         <div class="block-header d-flex align-center">
                             <p class="eventstitle">Próximos Eventos</p>
-                            <button class="d-flex align-center just-center plus-button" aria-label="Add Event">
+                            <button class="d-flex align-center just-center plus-button" id="event-button" name="event-button" aria-label="Add Event">
                                 <i class="fas fa-plus"></i>
-                            </button>
-                            
+                            </button>   
                         </div>
-                            <ol>
-                                <li class="list d-flex p-5">
-                                    <div class="eventmain d-flex align-center">
-                                        <div class="eventdate d-flex align-center just-center border-red">15/6</div>
-                                        <div class="flexcolumn">
-                                            <div class="eventtitle">Contactar XPTO</div>
-                                            <div class="eventtext">Comprar Papel</div>
+                        <!--Event Modal-->
+                        <div id="modalEvent" class="modal">
+                            <div class="modal-event border">
+                                <div class="modal-compose-header d-flex align-center">
+                                    <p>Criar Evento</p>
+                                    <i class="fas fa-times close"></i>
+                                </div>
+                                <!--Transform later into event form-->
+                                <div class="modal-compose-body">
+                                    <div class="line d-flex align-center">
+                                        <div class="modal-event-select">
+                                            <label for="event-day">Dia</label>
+                                            <select name="event-day" id="">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>
+                                        </div>
+                                        <div class="modal-event-select">
+                                            <label for="event-month">Mês</label>
+                                            <select name="event-month" id="">
+                                                <option value="1">Janeiro</option>
+                                                <option value="2">Fevereiro</option>
+                                                <option value="3">Março</option>
+                                                <option value="4">Abril</option>
+                                                <option value="5">Maio</option>
+                                                <option value="6">Junho</option>
+                                                <option value="7">Julho</option>
+                                                <option value="8">Agosto</option>
+                                                <option value="9">Setembro</option>
+                                                <option value="10">Outubro</option>
+                                                <option value="11">Novembro</option>
+                                                <option value="12">Dezembro</option>
+                                            </select>
+                                        </div>
+                                        <div class="modal-event-select">
+                                            <label for="event-year">Ano</label>
+                                            <select name="event-year" id="">
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="eventutils d-flex align-center">
-                                        <i class="fas fa-cog"></i>
-                                        <i class="fas fa-trash"></i>
+                                    <div class="line d-flex align-center">
+                                        <label for="subject">Título</label>
+                                        <input type="text" name="subject" id="">
                                     </div>
-                                </li>
-                                <li class="list d-flex p-5">
-                                    <div class="eventmain d-flex align-center">
-                                        <div class="eventdate d-flex align-center just-center border-red">15/6</div>
-                                        <div class="flexcolumn">
-                                            <div class="eventtitle">Contactar XPTO</div>
-                                            <div class="eventtext">Comprar Papel</div>
-                                        </div>
+                                    <div class="line">
+                                        <textarea name="mail-message" placeholder="Descrição" id="" cols="30" rows="10"></textarea>
                                     </div>
-                                    <div class="eventutils d-flex align-center">
-                                        <i class="fas fa-cog"></i>
-                                        <i class="fas fa-trash"></i>
+                                </div>
+                                <div class="modal-compose-footer d-flex">
+                                    <button type="submit">Criar Evento</button>
+                                </div>
+                            </div>
+                        </div>
+                        <ol>
+                            <li class="list d-flex p-5">
+                                <div class="eventmain d-flex align-center">
+                                    <div class="eventdate d-flex align-center just-center border-red">15/6</div>
+                                    <div class="flexcolumn">
+                                        <div class="eventtitle">Contactar XPTO</div>
+                                        <div class="eventtext">Comprar Papel</div>
                                     </div>
-                                </li>
-                                <li class="list d-flex p-5">
-                                    <div class="eventmain d-flex align-center">
-                                        <div class="eventdate d-flex align-center just-center border-red">15/6</div>
-                                        <div class="flexcolumn">
-                                            <div class="eventtitle">Contactar XPTO</div>
-                                            <div class="eventtext">Comprar Papel</div>
-                                        </div>
+                                </div>
+                                <div class="eventutils d-flex align-center">
+                                    <i class="fas fa-cog"></i>
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                            </li>
+                            <li class="list d-flex p-5">
+                                <div class="eventmain d-flex align-center">
+                                    <div class="eventdate d-flex align-center just-center border-red">15/6</div>
+                                    <div class="flexcolumn">
+                                        <div class="eventtitle">Contactar XPTO</div>
+                                        <div class="eventtext">Comprar Papel</div>
                                     </div>
-                                    <div class="eventutils d-flex align-center">
-                                        <i class="fas fa-cog"></i>
-                                        <i class="fas fa-trash"></i>
+                                </div>
+                                <div class="eventutils d-flex align-center">
+                                    <i class="fas fa-cog"></i>
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                            </li>
+                            <li class="list d-flex p-5">
+                                <div class="eventmain d-flex align-center">
+                                    <div class="eventdate d-flex align-center just-center border-red">15/6</div>
+                                    <div class="flexcolumn">
+                                        <div class="eventtitle">Contactar XPTO</div>
+                                        <div class="eventtext">Comprar Papel</div>
                                     </div>
-                                </li>
-                                <li class="list d-flex p-5">
-                                    <div class="eventmain d-flex align-center">
-                                        <div class="eventdate d-flex align-center just-center border-red">15/6</div>
-                                        <div class="flexcolumn">
-                                            <div class="eventtitle">Contactar XPTO</div>
-                                            <div class="eventtext">Comprar Papel</div>
-                                        </div>
+                                </div>
+                                <div class="eventutils d-flex align-center">
+                                    <i class="fas fa-cog"></i>
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                            </li>
+                            <li class="list d-flex p-5">
+                                <div class="eventmain d-flex align-center">
+                                    <div class="eventdate d-flex align-center just-center border-red">15/6</div>
+                                    <div class="flexcolumn">
+                                        <div class="eventtitle">Contactar XPTO</div>
+                                        <div class="eventtext">Comprar Papel</div>
                                     </div>
-                                    <div class="eventutils d-flex align-center">
-                                        <i class="fas fa-cog"></i>
-                                        <i class="fas fa-trash"></i>
+                                </div>
+                                <div class="eventutils d-flex align-center">
+                                    <i class="fas fa-cog"></i>
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                            </li>
+                            <li class="list d-flex p-5">
+                                <div class="eventmain d-flex align-center">
+                                    <div class="eventdate d-flex align-center just-center border-green">15/6</div>
+                                    <div class="flexcolumn">
+                                        <div class="eventtitle">Contactar XPTO</div>
+                                        <div class="eventtext">Comprar Papel</div>
                                     </div>
-                                </li>
-                                <li class="list d-flex p-5">
-                                    <div class="eventmain d-flex align-center">
-                                        <div class="eventdate d-flex align-center just-center border-green">15/6</div>
-                                        <div class="flexcolumn">
-                                            <div class="eventtitle">Contactar XPTO</div>
-                                            <div class="eventtext">Comprar Papel</div>
-                                        </div>
+                                </div>
+                                <div class="eventutils d-flex align-center">
+                                    <i class="fas fa-cog"></i>
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                            </li>
+                            <li class="list d-flex p-5">
+                                <div class="eventmain d-flex align-center">
+                                    <div class="eventdate d-flex align-center just-center border-green">15/6</div>
+                                    <div class="flexcolumn">
+                                        <div class="eventtitle">Contactar XPTO</div>
+                                        <div class="eventtext">Comprar Papel</div>
                                     </div>
-                                    <div class="eventutils d-flex align-center">
-                                        <i class="fas fa-cog"></i>
-                                        <i class="fas fa-trash"></i>
+                                </div>
+                                <div class="eventutils d-flex align-center">
+                                    <i class="fas fa-cog"></i>
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                            </li>
+                            <li class="list d-flex p-5">
+                                <div class="eventmain d-flex align-center">
+                                    <div class="eventdate d-flex align-center just-center border-green">15/6</div>
+                                    <div class="flexcolumn">
+                                        <div class="eventtitle">Contactar XPTO</div>
+                                        <div class="eventtext">Comprar Papel</div>
                                     </div>
-                                </li>
-                                <li class="list d-flex p-5">
-                                    <div class="eventmain d-flex align-center">
-                                        <div class="eventdate d-flex align-center just-center border-green">15/6</div>
-                                        <div class="flexcolumn">
-                                            <div class="eventtitle">Contactar XPTO</div>
-                                            <div class="eventtext">Comprar Papel</div>
-                                        </div>
-                                    </div>
-                                    <div class="eventutils d-flex align-center">
-                                        <i class="fas fa-cog"></i>
-                                        <i class="fas fa-trash"></i>
-                                    </div>
-                                </li>
-                                <li class="list d-flex p-5">
-                                    <div class="eventmain d-flex align-center">
-                                        <div class="eventdate d-flex align-center just-center border-green">15/6</div>
-                                        <div class="flexcolumn">
-                                            <div class="eventtitle">Contactar XPTO</div>
-                                            <div class="eventtext">Comprar Papel</div>
-                                        </div>
-                                    </div>
-                                    <div class="eventutils d-flex align-center">
-                                        <i class="fas fa-cog"></i>
-                                        <i class="fas fa-trash"></i>
-                                    </div>
-                                </li>
-                                
-                            </ol>                              
+                                </div>
+                                <div class="eventutils d-flex align-center">
+                                    <i class="fas fa-cog"></i>
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                            </li>
+                            
+                        </ol>                              
                     </div>
                     <div class="tickets border gap break mlTickets">
                         <div class="block-header d-flex align-center">
                             <p class="">Pedidos</p>
-                            <button type="button" class="d-flex align-center just-center plus-button"><i class="fas fa-plus"></i></button>
+                            <button type="button" class="d-flex align-center just-center plus-button" id="ticket-button" name="ticket-button"><i class="fas fa-plus"></i></button>
+                        </div>
+
+                        <!--Tickets Modal-->
+                        <div id="modalTickets" class="modal">
+                            <div class="modal-tickets border">
+                                <div class="modal-compose-header d-flex align-center">
+                                    <p>Pedidos</p>
+                                    <i class="fas fa-times close"></i>
+                                </div>
+                                <!--Transform later into mail form-->
+                                <div class="modal-compose-body">
+                                    <div class="line d-flex align-center">
+                                        <label for="subject">Pedido</label>
+                                        <input type="text" name="subject" id="">
+                                    </div>
+                                    <div class="line">
+                                        <textarea name="mail-message" placeholder="Descrição" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-compose-footer d-flex">
+                                    <button type="submit">Criar Pedido</button>
+                                </div>
+                            </div>
                         </div>
                         <div class="tickets-overflow">
                             <div class="tickets-body">
@@ -347,27 +481,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="modal-ticket" id="new-ticket">
-                            <div class="modal-ticket-content">
-                                <div class="modal-ticket-header">
-                                    <p>Criar Pedido</p>
-                                </div>
-                                <div class="modal-ticket-body">
-                                    <form action="#">
-                                        <label for="title">Título</label>
-                                        <input type="text" name="title" id="">
-                                        <label for="description">Descrição</label>
-                                        <input type="text" name="description" id="" placeholder="Descrição do pedido ou problema">
-                                        <div class="modal-ticket-button d-flex">
-                                            <button class="d-flex align-center">Cancelar</button>
-                                            <button type="submit">Criar</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                     <div class="chart border gap break mlChart">
                         <canvas id="home-chart"></canvas>
@@ -445,6 +558,6 @@
     <script src="https://kit.fontawesome.com/6d7f575d6e.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="/js/script.js?cb=1584013384769"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>

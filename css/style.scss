@@ -5,6 +5,7 @@
 @import '_topbar';
 @import '_maincontent';
 @import '_calendar';
+@import '_products';
 @import '_modal';
 @import '_queries';
 
@@ -27,8 +28,25 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   background-color: $mainbackgroundcolor;
+
+  &.modalOpen {
+    overflow: hidden;
+  }
 }
 
 button {
   border: none;
+}
+
+/* Input type numbers without default arrows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

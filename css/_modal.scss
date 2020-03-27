@@ -5,6 +5,11 @@
     background-color: $lightbackground;
     color: $textcolor;
     border-radius: $border-radius;
+    z-index: 10;
+    position: relative;
+    margin: auto;
+    margin-top: calc( 100vh * 0.25 );
+    
 }
 
 .modal-compose-header {
@@ -15,6 +20,10 @@
     color: $textcolor;
     padding: 10px 30px;
     height: 50px;
+
+    i{
+        cursor: pointer;
+    }
     
     p {
         margin: 0px;
@@ -67,6 +76,7 @@
         font-weight: $textlight;
         padding: 5px 20px;
         border-radius: $border-radius;
+        cursor: pointer;
     }
 }
 
