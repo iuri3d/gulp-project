@@ -37,17 +37,17 @@
       background-color: #404053;
       border: 1px solid #404053;
       border-radius: 2px;
-      color: #ffffff;
-      padding: 5px 10px;   
+      color: #fff;
+      padding: 5px 10px;
       font-size: 12px;
-      opacity: 0.8; 
+      opacity: 0.8;
       font-weight: 100;
       outline: none;
       cursor: pointer;
-      
+
       option {
         background-color: #404053;
-        color: #ffffff;
+        color: #fff;
         padding: 10px;
         outline: none;
         cursor: pointer;
@@ -57,7 +57,6 @@
     select:focus > option:checked {
       background: $backgroundcolor !important;
     }
-
   }
 
   p {
@@ -72,10 +71,9 @@
     padding: 5px 10px;
     margin-top: 10px;
     font-size: $font14;
-    background-color:#404053;
+    background-color: #404053;
     justify-content: flex-end;
     border-radius: 2px;
-    font-size: 12px;
     opacity: 0.8;
   }
 }
@@ -110,9 +108,8 @@
   background-color: $backgroundcolor;
   border-radius: 3px;
   border: 1px solid rgba($color: white, $alpha: 0.2);
-  
 
-  a{
+  a {
     padding: 5px;
     transition: all 0.2s ease-in-out;
     color: $iconcolor;
@@ -229,7 +226,6 @@
   justify-content: space-between;
   color: $textcolor;
 
-
   .eventdate {
     font-size: $font12;
     font-weight: $textlight;
@@ -271,6 +267,7 @@
   border-radius: $border-radius;
   background-color: $lightbackground;
 }
+
 .tickets-overflow {
   overflow: auto;
   height: calc(100% - 50px);
@@ -345,7 +342,7 @@
   margin: 0 auto;
   overflow: auto;
 
-  .modal-ticket-content{
+  .modal-ticket-content {
     margin: auto;
     position: relative;
     width: 400px;
@@ -363,7 +360,7 @@
   margin-top: 7px;
   border-radius: $border-radius;
 
-  & > div:nth-child(2n + 3){
+  & > div:nth-child(2n + 3) {
     background-color: $backgroundcolor;
 
     &:hover {

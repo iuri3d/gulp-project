@@ -10,6 +10,20 @@
   overflow: hidden;
   z-index: 10;
 
+  .header {
+    color: $textcolor;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 7px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      font-size: 1.25rem;
+    }
+  }
+
   .collapse {
     display: flex;
     opacity: 0;
@@ -32,21 +46,6 @@
     .collapse {
       opacity: 1;
       width: auto;
-    }
-  }
-
-  .header {
-    color: $textcolor;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 0 7px;
-    height: 60px;
-    align-items: center;
-    justify-content: center;
-
-
-    .logo {
-      font-size: 1.25rem;
     }
   }
 
@@ -78,7 +77,6 @@
   color: $textcolor;
   transition: all 0.15s ease-in-out;
   align-items: center;
-  
 
   &:hover {
     background-color: $sidebarhover;

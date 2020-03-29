@@ -1,112 +1,110 @@
 .modal-compose,
-.modal-event, 
+.modal-event,
 .modal-tickets {
-    width: 450px;
-    background-color: $lightbackground;
-    color: $textcolor;
-    border-radius: $border-radius;
-    z-index: 10;
-    position: relative;
-    margin: auto;
-    margin-top: calc( 100vh * 0.25 );
-    
+  width: 450px;
+  background-color: $lightbackground;
+  color: $textcolor;
+  border-radius: $border-radius;
+  z-index: 10;
+  position: relative;
+  margin: auto;
+  margin-top: calc(100vh * 0.25);
 }
 
 .modal-compose-header {
-    justify-content: space-between;
-    background-color: $mainbackgroundcolor;
-    font-size: $font16;
-    font-weight: $textregular;
-    color: $textcolor;
-    padding: 10px 30px;
-    height: 50px;
+  justify-content: space-between;
+  background-color: $mainbackgroundcolor;
+  font-size: $font16;
+  font-weight: $textregular;
+  color: $textcolor;
+  padding: 10px 30px;
+  height: 50px;
 
-    i{
-        cursor: pointer;
-    }
-    
-    p {
-        margin: 0px;
-    }
+  i {
+    cursor: pointer;
+  }
+
+  p {
+    margin: 0;
+  }
 }
+
 .modal-compose-body {
-    margin-top: 10px;
-    padding: 10px 30px;
-    font-size: $font16;
+  margin-top: 10px;
+  padding: 10px 30px;
+  font-size: $font16;
+  color: $textcolor;
+  font-weight: $textlight;
+
+  input {
+    width: 100%;
+    background-color: rgba($color: white, $alpha: 0.1);
+    border: 1px solid rgba($color: white, $alpha: 0.2);
+    border-radius: 1px;
+    margin-left: 10px;
     color: $textcolor;
-    font-weight: $textlight;
+  }
 
-    input {
-        width: 100%;
-        background-color: rgba($color: white, $alpha: 0.1);
-        border: 1px solid rgba($color: white, $alpha: 0.2);
-        border-radius: 1px;
-        margin-left: 10px;
-        color: $textcolor;
-    }
+  textarea {
+    width: 100%;
+    background-color: rgba($color: white, $alpha: 0.1);
+    border: 1px solid rgba($color: white, $alpha: 0.2);
+    border-radius: 1px;
+    outline: none;
+    resize: none;
+    color: $textcolor;
+  }
 
-    textarea {
-        width: 100%;
-        background-color: rgba($color: white, $alpha: 0.1);
-        border: 1px solid rgba($color: white, $alpha: 0.2);
-        border-radius: 1px;
-        outline: none;
-        resize: none;
-        color: $textcolor;
-    }
+  .line + .line {
+    margin-top: 15px;
+  }
 
-    .line + .line {
-        margin-top: 15px;
-    }
-
-    .modal-event-select + .modal-event-select {
-        margin-left: 15px;
-    }
+  .modal-event-select + .modal-event-select {
+    margin-left: 15px;
+  }
 }
 
 .modal-compose-footer {
-    padding: 20px 30px;
-    justify-content: flex-end;
+  padding: 20px 30px;
+  justify-content: flex-end;
 
-    button{
-        font-family: $textfontfamily;
-        background-color: $blue;
-        color: $textcolor;
-        font-size: $font12;
-        font-weight: $textlight;
-        padding: 5px 20px;
-        border-radius: $border-radius;
-        cursor: pointer;
-    }
+  button {
+    font-family: $textfontfamily;
+    background-color: $blue;
+    color: $textcolor;
+    font-size: $font12;
+    font-weight: $textlight;
+    padding: 5px 20px;
+    border-radius: $border-radius;
+    cursor: pointer;
+  }
 }
 
-
-
 .pop-up-ticket {
-    position: relative;
-    width: fit-content;
-    background-color: $lightbackground;
-    color: $textcolor;
-    border-radius: $border-radius;
-    font-size: $font14;
+  position: relative;
+  width: fit-content;
+  background-color: $lightbackground;
+  color: $textcolor;
+  border-radius: $border-radius;
+  font-size: $font14;
 
-    .edit-ticket,
-    .delete-ticket {
-        padding: 10px 20px;
+  .edit-ticket,
+  .delete-ticket {
+    padding: 10px 20px;
 
-        &:hover {
-            background-color: $sidebarhover;
-            cursor: pointer;
-        }
+    &:hover {
+      background-color: $sidebarhover;
+      cursor: pointer;
     }
+  }
 }
 
 .arrow {
-    position: absolute;
-    z-index: 0;
-    top: 10px;
-    right: -15px;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid $lightbackground;
+  position: absolute;
+  z-index: 0;
+  top: 10px;
+  right: -15px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid $lightbackground;
 }

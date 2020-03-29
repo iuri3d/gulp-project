@@ -4,6 +4,10 @@
   height: 50px;
   background-color: $backgroundcolor;
 
+  .notifications {
+    position: relative;
+  }
+
   .user {
     float: right;
     margin-right: 40px;
@@ -37,17 +41,14 @@
       cursor: pointer;
       transition: all 0.2s ease-in-out;
 
-      &:hover{
-        color:  #aaaeb7;
+      &:hover {
+        color: #aaaeb7;
       }
     }
   }
 
-  .notifications {
-    position: relative;    
-  }
-
-  .notifications-pop{
+  .notifications-pop {
+    z-index: 100;
     position: absolute;
     max-height: 0;
     transition: max-height 0.35s ease-out;
@@ -56,13 +57,13 @@
     right: 5px;
     min-width: 250px;
     background-color: $backgroundcolor;
-    /*border: 1px solid $lightbackground;*/
     box-shadow: 8px 8px 8px $mainbackgroundcolor;
     border-radius: $border-radius;
 
     .notifications-header {
       padding: 10px 20px;
       border-bottom: 1px solid rgba($color: white, $alpha: 0.1);
+
       a {
         text-decoration: none;
         color: $textcolor;
@@ -94,9 +95,9 @@
       border-top: 1px solid rgba($color: white, $alpha: 0.1);
     }
 
-    &.active{
+    &.active {
       max-height: 100%;
-      transition: max-height 0.40s ease-in;
+      transition: max-height 0.4s ease-in;
     }
   }
 }
