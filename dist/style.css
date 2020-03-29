@@ -115,7 +115,7 @@ ol {
         margin-bottom: 15px; }
         .modal .modal-content .modal-body form .form-group input {
           display: block;
-          width: 90%;
+          width: 100%;
           height: 34px;
           padding: 6px 12px;
           font-size: 14px;
@@ -138,7 +138,9 @@ ol {
           text-decoration: none;
           line-height: normal;
           border: none;
-          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 100%;
           cursor: pointer;
           transition: all 0.2s ease-in-out; }
@@ -704,6 +706,56 @@ ol {
   color: white;
   font-size: 0.625rem;
   text-align: center; }
+
+.email-bar {
+  width: 100%;
+  color: white;
+  height: 80px; }
+
+.email-list {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  background-color: #2a2a3f; }
+  .email-list .email-search {
+    width: 100%;
+    padding: 10px; }
+    .email-list .email-search input {
+      width: 100%;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 2px;
+      color: white; }
+    .email-list .email-search ::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+      padding-left: 10px; }
+
+.email-expand {
+  width: 75%;
+  background-color: #2a2a3f;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px; }
+
+.email-expand-header {
+  color: white;
+  justify-content: space-between; }
+  .email-expand-header .mail-image {
+    margin: 0 25px;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%;
+    color: white; }
+  .email-expand-header .email-expand-icons i {
+    font-size: 1.875rem;
+    padding: 10px 25px; }
+  .email-expand-header .email-expand-title {
+    flex-direction: column;
+    color: white; }
+    .email-expand-header .email-expand-title .email-expand-sender {
+      font-size: 0.75rem;
+      font-weight: 300; }
 
 .modal-compose,
 .modal-event,

@@ -1,0 +1,69 @@
+.email-bar {
+  width: 100%;
+  color: $textcolor;
+  height: 80px;
+}
+
+.email-list {
+  width: 100%;
+  border-radius: $border-radius;
+  border: 1px solid rgba($color: white, $alpha: 0.2);
+  color: $textcolor;
+  background-color: $backgroundcolor;
+
+  .email-search {
+    width: 100%;
+    padding: 10px;
+
+    input {
+      width: 100%;
+      border: none;
+      background-color: rgba($color: white, $alpha: 0.2);
+      border-radius: 2px;
+      color: $textcolor;
+    }
+
+    ::placeholder {
+      color: rgba($color: white, $alpha: 0.5);
+      padding-left: 10px;
+    }
+  }
+}
+
+.email-expand {
+  width: 75%;
+  background-color: $backgroundcolor;
+  border: 1px solid rgba($color: white, $alpha: 0.2);
+  border-radius: $border-radius;
+}
+
+.email-expand-header {
+  color: $textcolor;
+  justify-content: space-between;
+
+  .mail-image {
+    margin: 0 25px;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%;
+    color: $textcolor;
+  }
+
+  .email-expand-icons {
+    i {
+      font-size: $font30;
+      padding: 10px 25px;
+    }
+  }
+
+  .email-expand-title {
+    flex-direction: column;
+    color: $textcolor;
+
+    .email-expand-sender {
+      font-size: $font12;
+      font-weight: $textlight;
+    }
+  }
+}
