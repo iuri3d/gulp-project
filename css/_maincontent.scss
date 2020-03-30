@@ -213,7 +213,8 @@
 
     .mailtitle {
       font-size: $font14;
-      font-weight: $textregular;
+      font-weight: $textlight;
+      opacity: 0.8;
     }
 
     .maildate {
@@ -224,7 +225,7 @@
   }
 
   .mailsubject {
-    font-size: $font10;
+    font-size: $font12;
     font-weight: $textregular;
   }
 

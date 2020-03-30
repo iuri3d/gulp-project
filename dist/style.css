@@ -472,13 +472,14 @@ ol {
     justify-content: space-between; }
     .mailitem .mailheader .mailtitle {
       font-size: 0.875rem;
-      font-weight: 400; }
+      font-weight: 300;
+      opacity: 0.8; }
     .mailitem .mailheader .maildate {
       font-size: 0.75rem;
       font-weight: 300;
       padding-right: 10px; }
   .mailitem .mailsubject {
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     font-weight: 400; }
   .mailitem .mailtext {
     font-size: 0.625rem;
