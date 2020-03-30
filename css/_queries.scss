@@ -101,6 +101,10 @@
   .product-card:nth-child(1n + 5) {
     margin-top: 7px;
   }
+
+  .email-bar {
+    font-size: $font16;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -146,5 +150,15 @@
 
   .mailitem {
     padding: 5px 0;
+  }
+
+  .email-list {
+    width: 25%;
+    margin-right: 7px;
+  }
+
+  .email-expand {
+    display: block;
+    width: calc(75% - 7px);
   }
 }

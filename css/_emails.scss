@@ -1,7 +1,27 @@
 .email-bar {
   width: 100%;
+  padding: 10px;
   color: $textcolor;
+  background-color: $backgroundcolor;
   height: 80px;
+  justify-content: space-evenly;
+  border-radius: $border-radius;
+  margin-bottom: 7px;
+  font-size: $font14;
+  text-align: center;
+
+  .inbox,
+  .sent,
+  .spam,
+  .trash {
+    padding: 10px;
+    border-radius: $border-radius;
+
+    &:hover {
+      background-color: $sidebarhover;
+    }
+  }
+
 }
 
 .email-list {
@@ -31,6 +51,7 @@
 }
 
 .email-expand {
+  display: none;
   width: 75%;
   background-color: $backgroundcolor;
   border: 1px solid rgba($color: white, $alpha: 0.2);
@@ -40,6 +61,8 @@
 .email-expand-header {
   color: $textcolor;
   justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba($color: white, $alpha: 0.2);
 
   .mail-image {
     margin: 0 25px;
@@ -52,7 +75,7 @@
 
   .email-expand-icons {
     i {
-      font-size: $font30;
+      font-size: $font16;
       padding: 10px 25px;
     }
   }
@@ -66,4 +89,10 @@
       font-weight: $textlight;
     }
   }
+}
+
+.email-text {
+  width: 100%;
+  padding: 40px 50px;
+  color: $textcolor;
 }

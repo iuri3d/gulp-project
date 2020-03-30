@@ -737,8 +737,26 @@ ol {
 
 .email-bar {
   width: 100%;
+  padding: 10px;
   color: white;
-  height: 80px; }
+  background-color: #2a2a3f;
+  height: 80px;
+  justify-content: space-evenly;
+  border-radius: 3px;
+  margin-bottom: 7px;
+  font-size: 0.875rem;
+  text-align: center; }
+  .email-bar .inbox,
+  .email-bar .sent,
+  .email-bar .spam,
+  .email-bar .trash {
+    padding: 10px;
+    border-radius: 3px; }
+    .email-bar .inbox:hover,
+    .email-bar .sent:hover,
+    .email-bar .spam:hover,
+    .email-bar .trash:hover {
+      background-color: #454569; }
 
 .email-list {
   width: 100%;
@@ -760,6 +778,7 @@ ol {
       padding-left: 10px; }
 
 .email-expand {
+  display: none;
   width: 75%;
   background-color: #2a2a3f;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -767,7 +786,9 @@ ol {
 
 .email-expand-header {
   color: white;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
   .email-expand-header .mail-image {
     margin: 0 25px;
     width: 60px;
@@ -776,7 +797,7 @@ ol {
     border-radius: 50%;
     color: white; }
   .email-expand-header .email-expand-icons i {
-    font-size: 1.875rem;
+    font-size: 1rem;
     padding: 10px 25px; }
   .email-expand-header .email-expand-title {
     flex-direction: column;
@@ -784,6 +805,11 @@ ol {
     .email-expand-header .email-expand-title .email-expand-sender {
       font-size: 0.75rem;
       font-weight: 300; }
+
+.email-text {
+  width: 100%;
+  padding: 40px 50px;
+  color: white; }
 
 .modal-compose,
 .modal-event,
@@ -940,7 +966,10 @@ ol {
     margin-top: 0; }
 
   .product-card:nth-child(1n + 5) {
-    margin-top: 7px; } }
+    margin-top: 7px; }
+
+  .email-bar {
+    font-size: 1rem; } }
 @media screen and (min-width: 1025px) {
   .container-login .login {
     width: 50%;
@@ -965,7 +994,15 @@ ol {
     right: 170px; }
 
   .mailitem {
-    padding: 5px 0; } }
+    padding: 5px 0; }
+
+  .email-list {
+    width: 25%;
+    margin-right: 7px; }
+
+  .email-expand {
+    display: block;
+    width: calc(75% - 7px); } }
 html {
   box-sizing: border-box;
   font-size: 100%; }
