@@ -149,4 +149,132 @@ $(document).ready(function(){
             $(this).siblings('input').val(newValue);
         }
     });
+
+
+
+    // METEO LIBRARY
+
+    /* see if browser has geolocation */
+    navigator.geolocation.watchPosition(function(position) {
+        /* if user accepts geolocation - show meteo where he is */
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        getWeatherLocation(latitude, longitude);
+    },
+    function(error) {
+        if (error.code == error.PERMISSION_DENIED){
+            /* if user do not accept geolocation - show meteo from Aveiro */
+            getWeatherDefault();
+        }
+    });
+
+    function getWeatherLocation(latitude, longitude) {
+        $.ajax({
+            url: "https://api.openweathermap.org/data/2.5/forecast?lang=pt&lat=" + latitude + "&lon=" + longitude + "&APPID=b7aaa3a349294d5706002e82df3de1ea&units=metric",
+            success: function(json) {
+                console.log(json);
+                displayMeteoData (json)
+            }
+        });
+    }
+
+    function getWeatherDefault() {
+        $.ajax({
+            url: "https://api.openweathermap.org/data/2.5/forecast?lang=pt&APPID=b7aaa3a349294d5706002e82df3de1ea&units=metric&q=Lisbon,PT",
+            success: function(json) {
+                displayMeteoData (json)
+            }
+        });
+    }
+
+    function displayMeteoData (json) {
+        var date = new Date();
+        var month = date.getMonth()+1;
+        var today = date.getDate();
+        var year = date.getYear();
+        var week = [];
+
+        /* days of the week */
+        for ( i = 0 ; i < 5; i++ ){
+            /* 31 days */
+            if ( month == 1 ||  month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12 ) {
+                getDate(31);
+            }
+            /* 30 days */
+            else if ( month == 4 || month == 6 || month == 9 || month == 11) {
+                getDate(30);
+            }
+            /* February */
+            else{
+                /* 29 days */
+                if ((((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))){
+                    getDate(29);
+                }
+                else{
+                    /* 28 days */
+                    getDate(28);
+                }
+            }
+        }
+
+        function getDate(monthDays){
+            if ( today + i <= monthDays ){
+                week[i] = (today + i) + "/" + month;
+            }
+            else{
+                week[i] = Math.abs((today + i) - monthDays) + "/" + (month + 1)
+            }
+        }
+
+
+        $('#meteo-city').html(json.city.name);
+
+        /* DAY ONE */        
+        $("#iconDay1").html(getWeatherIcon(json.list[0].weather[0].id));
+        $("#tempDay1").html(Math.round(json.list[0].main.temp) + "<span>º</span>");
+        $("#dateDay1").html(week[0]);
+        /* DAY TWO */
+        $("#iconDay2").html(getWeatherIcon(json.list[7].weather[0].id));
+        $("#tempDay2").html(Math.round(json.list[7].main.temp) + "<span>º</span>");
+        $("#dateDay2").html(week[1]);
+        /* DAY THREE */
+        $("#iconDay3").html(getWeatherIcon(json.list[14].weather[0].id));
+        $("#tempDay3").html(Math.round(json.list[14].main.temp) + "<span>º</span>");
+        $("#dateDay3").html(week[2]);
+        /* DAY FOUR */
+        $("#iconDay4").html(getWeatherIcon(json.list[21].weather[0].id));
+        $("#tempDay4").html(Math.round(json.list[21].main.temp) + "<span>º</span>");
+        $("#dateDay4").html(week[3]);
+        /* DAY FIVE */
+        $("#iconDay5").html(getWeatherIcon(json.list[28].weather[0].id));
+        $("#tempDay5").html(Math.round(json.list[28].main.temp) + "<span>º</span>");
+        $("#dateDay5").html(week[4]);
+    }
+
+    function getWeatherIcon(iconId) {
+        var icon = "";
+        if(iconId >= 200 && iconId < 300){
+            icon = "thunderstorm";
+        }
+        else if(iconId >= 300 && iconId < 400){
+            icon = "rain-mix";
+        }
+        else if(iconId >= 500 && iconId < 600){
+            icon = "rain";
+        }
+        else if(iconId >= 600 && iconId < 700){
+            icon = "snow";
+        }
+        else if(iconId >= 700 && iconId < 800){
+            icon = "fog";
+        }
+        else if(iconId == 800){
+            icon = "day-sunny";
+        }
+        else if(iconId > 800 && iconId < 900){
+            icon = "cloud";
+        }
+        icon = "<i class='wi wi-" + icon + "'></i>";
+        return icon;
+    }
 })
