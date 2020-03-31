@@ -37,6 +37,12 @@ ol {
 .no-margin {
   margin: 0; }
 
+.ml-15 {
+  margin-left: 15px; }
+
+.mt-10 {
+  margin-top: 10px; }
+
 /* The Modal (background) */
 .modal {
   display: none;
@@ -198,10 +204,8 @@ ol {
     color: white;
     text-decoration: none;
     cursor: pointer;
-    padding: 0 7px;
     height: 60px;
-    align-items: center;
-    justify-content: center; }
+    align-items: center; }
     .sidebar .header .logo {
       font-size: 1.25rem; }
   .sidebar .collapse {
@@ -212,10 +216,6 @@ ol {
     transition: all 0.2s ease-in-out; }
   .sidebar.open {
     width: 200px; }
-    .sidebar.open .header {
-      justify-content: space-between; }
-      .sidebar.open .header .logo {
-        padding: 0 16px; }
     .sidebar.open .collapse {
       opacity: 1;
       width: auto; }
@@ -459,6 +459,8 @@ ol {
 .mailitem {
   background-color: #3a3c53;
   min-height: 50px; }
+  .mailitem:hover {
+    background-color: #454569; }
   .mailitem .mailcontent {
     width: 100%; }
   .mailitem .mailimage {
@@ -510,6 +512,8 @@ ol {
   height: 50px;
   justify-content: space-between;
   color: white; }
+  .list:hover {
+    background-color: #454569; }
   .list .eventdate {
     font-size: 0.75rem;
     font-weight: 300;
@@ -545,6 +549,8 @@ ol {
   font-weight: 300;
   justify-content: space-between;
   height: 49px; }
+  .ticket:hover {
+    background-color: #454569; }
   .ticket .ticket-open {
     height: 100%;
     width: 50px;
@@ -847,7 +853,6 @@ ol {
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 1px;
-    margin-left: 10px;
     color: white; }
   .modal-compose-body textarea {
     width: 100%;
@@ -857,13 +862,14 @@ ol {
     outline: none;
     resize: none;
     color: white; }
-  .modal-compose-body .line + .line {
-    margin-top: 15px; }
+  .modal-compose-body .align {
+    flex-direction: column;
+    width: fit-content; }
   .modal-compose-body .modal-event-select + .modal-event-select {
     margin-left: 15px; }
 
 .modal-compose-footer {
-  padding: 20px 30px;
+  padding: 5px 30px 15px 30px;
   justify-content: flex-end; }
   .modal-compose-footer button {
     font-family: "Open Sans";

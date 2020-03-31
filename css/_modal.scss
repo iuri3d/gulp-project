@@ -41,7 +41,6 @@
     background-color: rgba($color: white, $alpha: 0.1);
     border: 1px solid rgba($color: white, $alpha: 0.2);
     border-radius: 1px;
-    margin-left: 10px;
     color: $textcolor;
   }
 
@@ -55,8 +54,9 @@
     color: $textcolor;
   }
 
-  .line + .line {
-    margin-top: 15px;
+  .align {
+    flex-direction: column;
+    width: fit-content;
   }
 
   .modal-event-select + .modal-event-select {
@@ -65,7 +65,7 @@
 }
 
 .modal-compose-footer {
-  padding: 20px 30px;
+  padding: 5px 30px 15px 30px;
   justify-content: flex-end;
 
   button {

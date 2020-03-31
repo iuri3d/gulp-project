@@ -14,10 +14,8 @@
     color: $textcolor;
     text-decoration: none;
     cursor: pointer;
-    padding: 0 7px;
     height: 60px;
     align-items: center;
-    justify-content: center;
 
     .logo {
       font-size: 1.25rem;
@@ -34,14 +32,6 @@
 
   &.open {
     width: 200px;
-
-    .header {
-      justify-content: space-between;
-
-      .logo {
-        padding: 0 16px;
-      }
-    }
 
     .collapse {
       opacity: 1;

@@ -15,10 +15,10 @@
         <nav>
             <div class="sidebar">
                 <a href="#" class="header d-flex">
-                    <span class="logo collapse d-flex align-center">Unicorn</span>
                     <span class="hamburger icon d-flex align-center just-center">
                         <i class="fas fa-bars"></i>
                     </span>
+                    <span class="logo collapse d-flex align-center">Unicorn</span>
                 </a>
                 <a href="home.html" class="sidebaritem d-flex">
                     <span class="icon">
@@ -213,15 +213,17 @@
                                 </div>
                                 <!--Transform later into mail form-->
                                 <div class="modal-compose-body">
-                                    <div class="line d-flex align-center">
-                                        <label for="to">Destinatário</label>
-                                        <input type="text" name="to" id="">
+                                    <div class="main-line d-flex">
+                                        <div class="line align d-flex">
+                                            <label for="to">Destinatário</label>
+                                            <label for="subject" class="mt-10">Assunto</label>
+                                        </div>
+                                        <div class="line ml-15 ">
+                                            <input type="text" name="to" id="">
+                                            <input type="text" name="subject" id="" class="mt-10">
+                                        </div>
                                     </div>
-                                    <div class="line d-flex align-center">
-                                        <label for="subject">Assunto</label>
-                                        <input type="text" name="subject" id="">
-                                    </div>
-                                    <div class="line">
+                                    <div class="line mt-10">
                                         <textarea name="mail-message" placeholder="Mensagem" id="" cols="30" rows="10"></textarea>
                                     </div>
                                 </div>
