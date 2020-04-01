@@ -1,5 +1,24 @@
 $(document).ready(function(){
 
+    openCloseSidebar();
+
+    function openCloseSidebar(){
+        if ( $(window).width() > 1024 ) {
+            $('.sidebar').addClass('open');
+            $('.contentbox').addClass('open');
+            $('#hamb').addClass('open');
+        }
+        else {
+            $('.sidebar').removeClass('open');
+            $('.contentbox').removeClass('open');
+            $('#hamb').removeClass('open');
+        }
+    }
+    
+    $( window ).resize(function() {
+        openCloseSidebar();
+    });
+
     
     //////////////Display Login Modal/////////
     $('.login').on('click', function(){
@@ -57,9 +76,10 @@ $(document).ready(function(){
     });
    
     ////// Toggle side bar open //////
-    $(".hamburger").click(function() {
+    $("#hamb").click(function() {
+        $(this).toggleClass('open');
         $(".sidebar").toggleClass("open");
-        $(".contentbox").toggleClass("open");
+        $(".contentbox").toggleClass("open");        
 
         /* FOR GRAPHICS TO FIT IN DIV */
         var chartWidth = $('.chart').width();
@@ -110,24 +130,7 @@ $(document).ready(function(){
         }
         });
     }
-    openCloseSidebar();
-
-    function openCloseSidebar(){
-        if ( $(window).width() > 1024 ) {
-            $('.sidebar').addClass('open');
-            $('.contentbox').addClass('open');
-        }
-        else {
-            $('.sidebar').removeClass('open');
-            $('.contentbox').removeClass('open');
-        }
-    }
     
-    $( window ).resize(function() {
-        openCloseSidebar();
-    });
-
-
 
     /* add or remove product button */
     $('.product-selector .button-selector').on('click', function(){        

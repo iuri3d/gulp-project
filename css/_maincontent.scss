@@ -165,6 +165,13 @@
   }
 }
 
+.social-text {
+  color: $textcolor;
+  display: none;
+  font-size: $font12;
+  font-weight: $textlight;
+}
+
 ////////Space between blocks//////
 .gap + .gap {
   margin-top: 7px;

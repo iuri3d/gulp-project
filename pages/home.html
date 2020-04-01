@@ -15,9 +15,12 @@
         <nav>
             <div class="sidebar">
                 <a href="#" class="header d-flex">
-                    <span class="hamburger icon d-flex align-center just-center">
-                        <i class="fas fa-bars"></i>
-                    </span>
+                    <div id="hamb" class=" open hamburger icon d-flex align-center just-center">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <span class="logo collapse d-flex align-center">Unicorn</span>
                 </a>
                 <a href="home.html" class="sidebaritem d-flex">
@@ -190,9 +193,18 @@
                         </div>
                     </div>
                     <div class="social d-flex align-center flex-item gap">
-                        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <div class="social-fb d-flex align-center">
+                            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                            <span class="social-text">1254 Likes</span>
+                        </div>
+                        <div class="social-twitter d-flex align-center">
+                            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <span class="social-text">8172 Seguidores</span>
+                        </div>
+                        <div class="social-inst d-flex align-center">
+                            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <span class="social-text">19283 Seguidores</span>
+                        </div>
                     </div>
                 </div>
                 <div class="bigrow">
@@ -615,6 +627,6 @@
     <!--<script src="https://kit.fontawesome.com/6d7f575d6e.js" crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="/js/script.js"></script>
+    <script src="/dist/script.min.js"></script>
 </body>
 </html>
